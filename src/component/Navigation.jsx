@@ -19,18 +19,24 @@ function Navigation() {
 export default Navigation
 
 const Nav = styled.nav`
-border: 1px solid #000;
-margin: 0 auto;
+position: absolute;
+top: 50%;
+left: 50%;
+/* border: 1px solid #000; */
+transform: translate(-50%, -50%);
+
     ul{
         display: flex;
         gap: 100px;
         align-items: center;
+        justify-content: center;
+       
         li{
             list-style: none;
             a{
-                
                 font-size: 20px;
                 font-weight: bold;
+                text-decoration: none;
             }
         }
     }

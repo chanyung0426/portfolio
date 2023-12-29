@@ -3,12 +3,14 @@ import {Link} from 'react-router-dom';
 import { SiMcdonalds } from "react-icons/si";
 import Navigation from './Navigation';
 import styled from 'styled-components';
+import Util from './Util';
 
 function Header() {
     return (
         <HeaderContainer>
             <h1 className='logo'><Link to='/'><SiMcdonalds /></Link></h1>
             <Navigation/>
+            <Util/>
         </HeaderContainer>
     )
 }
@@ -32,6 +34,7 @@ const HeaderContainer = styled.header`
         left: 0;
         margin: 15px 0px 0px 365px;
         font-size: 100px;
+        /* border: 2px solid blue; */
         a{
             display: flex;
             align-items: center;

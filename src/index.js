@@ -1,11 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Route, RouterProvider, Routes, createBrowserRouter } from 'react-router-dom';
+
+//css
+import './index.css';
+
+//컴포넌트
 import NotFound from './page/NotFound';
 import Menu from './component/Menu';
+import Store from './component/Store';
+import New from './component/Store';
+import Story from './component/Story';
+import Renter from './component/Renter';
+import Recruit from './component/Recruit';
+import Language from './component/Language';
 
 const router = createBrowserRouter([
   {
@@ -15,7 +25,15 @@ const router = createBrowserRouter([
 
     children : [
       
-      {path:'/menu', element : <Menu/>}
+      {path:'/menu', element : <Menu/>},
+      {path:'/store', element : <Store/>},
+      {path:'/new', element : <New/>},
+      {path:'/story', element : <Story/>},
+
+      {path:'/renter', element : <Renter/>},
+      {path:'/recruit', element : <Recruit/>},
+      {path:'/lang', element : <Language/>}
+
     ]
   }
 ]);

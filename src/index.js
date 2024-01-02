@@ -16,6 +16,7 @@ import Story from './component/Story';
 import Renter from './component/Renter';
 import Recruit from './component/Recruit';
 import Language from './component/Language';
+import UploadProduct from './page/UploadProduct';
 
 const router = createBrowserRouter([
   {
@@ -32,8 +33,15 @@ const router = createBrowserRouter([
 
       {path:'/renter', element : <Renter/>},
       {path:'/recruit', element : <Recruit/>},
-      {path:'/lang', element : <Language/>}
+      {path:'/lang', element : <Language/>},
 
+      {
+        path: '/product/upload',
+        element :
+
+        <UploadProduct/>
+        
+      }
     ]
   }
 ]);

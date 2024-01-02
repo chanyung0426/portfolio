@@ -55,7 +55,7 @@ function Search() {
             <input
             type='text'
             value={text}
-            placeholder='메뉴 또는 알러지정보를 검색하실 수 있습니다.'
+            placeholder='알레르기 정보를 검색하실 수 있습니다.'
             onChange={inputChange}
             onKeyPress={enterPress}
             >

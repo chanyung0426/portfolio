@@ -1,17 +1,50 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom';
 import { SiMcdonalds } from "react-icons/si";
 import Navigation from './Navigation';
 import styled from 'styled-components';
 import Util from './Util';
+import { googleLogOut, googleLogin, onUserState } from '../api/firebase';
+import UserData from './UserData';
 
 function Header() {
+    const [user, setUser] = useState();
+
+    const login = ()=>{
+        googleLogin().then(setUser);
+    }
+    const logOut = ()=>{
+        googleLogOut().then(setUser);
+    }
+
+    useEffect(()=>{
+        onUserState((user)=>{
+            setUser(user);
+        })
+    },[])
+    
+    console.log(user)
     return (
         <HeaderContainer>
             <h1 className='logo'><Link to='/'><SiMcdonalds /></Link></h1>
             <Navigation/>
             <Util/>
-
+            
+            
+            <div className='userWrap'>
+                {user && user.isAdmin &&
+                <Link to='/product/upload' className='uploadBtn'>업로드</Link>
+                }
+                {user? (
+                    <>
+                    <UserData user={user}/>
+                    <button className='logOutBtn' onClick={logOut}>logout</button>
+                    </>
+                ) : (
+                    <button className='loginBtn' onClick={login}>login</button>
+                )}
+            </div>
+           
         </HeaderContainer>
     )
 }
@@ -42,6 +75,23 @@ const HeaderContainer = styled.header`
         }
         path{
             color: #FFBC0D;
+        }
+    }
+
+    .userWrap{
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+        gap: 12px;
+        button{
+            padding: 6px 12px;
+            border-radius: 6px;
+            &.loginBtn{
+                background: gold;
+            }
+            &.logOutBtn{
+                background: gray;
+            }
         }
     }
 `

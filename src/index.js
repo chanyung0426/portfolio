@@ -34,13 +34,12 @@ const router = createBrowserRouter([
       {path:'/renter', element : <Renter/>},
       {path:'/recruit', element : <Recruit/>},
       {path:'/lang', element : <Language/>},
-
+ 
       {
         path: '/product/upload',
         element :
-
-        <UploadProduct/>
         
+        <UploadProduct/>
       }
     ]
   }

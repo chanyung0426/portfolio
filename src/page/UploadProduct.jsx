@@ -2,6 +2,7 @@ import React, { useContext, useRef, useState } from 'react'
 import styled from 'styled-components';
 import { addProducts } from '../api/firebase';
 import { CategoryContext } from '../context/CategoryContext';
+import { upLoadimg } from '../api/imgupload';
 
 function UploadProduct() {
     const [file, setFile] = useState(null)
@@ -25,12 +26,12 @@ function UploadProduct() {
         }else{
             setProduct((prev)=>({...prev, [name]:value}))
         }
-    }
+    }   
 
     const uploadSubmit = async (e) => {
         e.preventDefault();
         try{
-            const url = await upLoadImg(file);
+            const url = await upLoadimg(file);
             await addProducts(product, url)
             setSuccess('업로드가 완료되었습니다.');
             setTimeout(()=>{
@@ -127,5 +128,18 @@ function UploadProduct() {
 export default UploadProduct
 
 const FormContainer = styled.div`
-    
+    max-width: 1200px;
+    padding: 30px 0px;
+    margin: 0px auto;
+    display: flex;
+    gap: 40px;
+    .imgUploadWrap{
+        max-width: 500px;
+        height: auto;
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
 `

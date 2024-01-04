@@ -82,11 +82,26 @@ export default Search
 const SearchForm = styled.form`
     display: flex;
     position: fixed;
-    top: 50px;
+    top: 0px;
     right: 350px;
     transition: 500ms;
     z-index: 11;
-    width: 36px;    
+    width: 36px;
+    .search-btn{
+        font-size: 36px;
+        display: flex;
+        align-items: center;
+    }
+    .clear-btn{
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+    }
+    
+
 `
 
 /* 

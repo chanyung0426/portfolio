@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Route, RouterProvider, Routes, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 //css
 import './index.css';
 
 //컴포넌트
+import App from './App';
 import NotFound from './page/NotFound';
 import Menu from './component/Menu';
 import Store from './component/Store';
@@ -18,7 +18,9 @@ import Recruit from './component/Recruit';
 import Language from './component/Language';
 import UploadProduct from './page/UploadProduct';
 
-const router = createBrowserRouter([
+
+
+const routes = createBrowserRouter([
   {
     path : '/',
     element  : <App/>,
@@ -37,10 +39,9 @@ const router = createBrowserRouter([
  
       {
         path: '/product/upload',
-        element :
-        
-        <UploadProduct/>
+        element : <UploadProduct/>
       }
+
     ]
   }
 ]);
@@ -48,9 +49,12 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-
-    <RouterProvider router={router}/>
+    
+    <RouterProvider router={routes}/>
+  
   </React.StrictMode>
+  
+
 );
 
 // If you want to start measuring performance in your app, pass a function

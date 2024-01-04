@@ -1,21 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
 import Main from './page/Main';
-import { Route, Routes } from 'react-router-dom';
 import Search from './component/Search';
 import GlobalStyle from './style/GlobalStyle';
 import { AuthContextProvider } from './context/AuthContext';
+import { Outlet, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <>
-      <AuthContextProvider>
+     <AuthContextProvider>
        <GlobalStyle/>
        <Main/>
        <Search/>
-       
-    
-      </AuthContextProvider>
+       <Outlet/>
+     </AuthContextProvider>
     </>
   );
 }

@@ -15,13 +15,13 @@ function UploadProduct() {
 
     const [product, setProduct] = useState({
         title : '',
-        price : '',
+        option : '',
         allergic : '',
     });
 
     const productInfoChange = (e) =>{
         const {name, value, files} = e.target;
-        if(name === 'file' && files &&files[0]){
+        if(name === 'file' && files && files[0]){
             setFile(files[0])
         }else{
             setProduct((prev)=>({...prev, [name]:value}))
@@ -42,12 +42,13 @@ function UploadProduct() {
 
             setProduct({
                 title : '',
-                price : '',
+                option : '',
                 allergic : '',
             })
             if(fileRef.current){
                 fileRef.current.value = '';
             }
+
         }catch(error){
             console.error(error)
             setError('업로드에 실패했습니다')
@@ -83,15 +84,6 @@ function UploadProduct() {
                     />
                     {/* 상품제목 */}
                     
-                    <input
-                    type='text'
-                    name='price'
-                    placeholder='상품 가격을 입력하세요'
-                    value={product.price}
-                    onChange={productInfoChange}
-                    />
-                    {/* 상품가격 */}
-
                     <input
                     type='text'
                     name='allergic'
@@ -131,15 +123,42 @@ const FormContainer = styled.div`
     max-width: 1200px;
     padding: 30px 0px;
     margin: 0px auto;
+    margin-top: 200px;
     display: flex;
     gap: 40px;
     .imgUploadWrap{
-        max-width: 500px;
-        height: auto;
+        max-width: 310px;
+        height: 210px;
         img{
             display: block;
             width: 100%;
             height: 100%;
+        }
+    }
+    form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+        gap: 20px;
+        input{
+            width: 100%;
+            box-sizing: border-box;
+            height: 40px;
+            border-radius: 4px;
+            border-color: rgba(0,0,0,0.2);
+            padding: 6px 12px;
+        }
+        button{
+            margin-top: auto;
+            height: 50px;
+            border-radius: 4px;
+            background: #ccc;
+            border: none;
+            transition: 500ms;
+            &:hover{
+                background:  #FFBC0D;
+            }
         }
     }
 `

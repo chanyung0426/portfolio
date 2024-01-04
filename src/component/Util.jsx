@@ -24,7 +24,7 @@ const UitilContainer = styled.div`
     width: 311px;
     position: relative;
     margin-right: auto;
-    border: 2px solid gold;
+    /* border: 2px solid gold; */
     ul{
         display: flex;
         gap: 4px;

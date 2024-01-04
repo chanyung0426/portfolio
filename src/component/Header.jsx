@@ -43,8 +43,8 @@ function Header() {
                 ) : (
                     <button className='loginBtn' onClick={login}>login</button>
                 )}
+
             </div>
-           
         </HeaderContainer>
     )
 }

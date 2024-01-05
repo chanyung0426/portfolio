@@ -79,3 +79,13 @@ export async function addProducts(product, image){
         image,
     })
 }
+
+//database에 있는 상품을 가져오기
+export async function getProducts(){
+    const snapshot = await get(ref(database, 'products'));
+    if(snapshot.exists()){
+        return Object.values(snapshot.val())
+    }else{
+        return[]
+    }
+}

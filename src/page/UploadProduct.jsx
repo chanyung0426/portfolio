@@ -17,6 +17,7 @@ function UploadProduct() {
         title : '',
         option : '',
         allergic : '',
+        category: '',
     });
 
     const productInfoChange = (e) =>{
@@ -43,7 +44,8 @@ function UploadProduct() {
             setProduct({
                 title : '',
                 option : '',
-                allergic : '',
+                allergic : '',  
+                category: '',
             })
             if(fileRef.current){
                 fileRef.current.value = '';

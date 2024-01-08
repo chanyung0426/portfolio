@@ -13,7 +13,8 @@ function DetailPageEvent({product}) {
             id : product.id,
             image : product.image,
             option : product.option,
-            category : product.category
+            category : product.category,
+            allergic : product.allergic
           }
         })
     }
@@ -26,6 +27,7 @@ function DetailPageEvent({product}) {
                  <h3 className='itemTitle'>{product.title}</h3>
                  <div className='itemFlex'>
                     <p className='itemOption'>{product.option}</p>
+                    <p className='itemAllergic'>{product.allergic}</p>
                  </div>
                  
             </div>    
@@ -40,16 +42,21 @@ export default DetailPageEvent
 
 const DetailItem = styled.div`
     display: flex;
+    margin-top: 140px;
     flex-direction: column;
     gap: 20px;
     .itemTitle{
             font-size: 20px;
             font-weight: normal;
             transition: 500ms;
-            color: rgba(0,0,0,0.5);
+            color: rgba(0,0,0,1);;
             &:hover{
-                color: rgba(0,0,0,1);
+                color: rgba(0,0,0,0.5);
             }
-            
+        .itemFlex{
+            display: flex;
+            justify-content: space-between;
         }
+
+    }
 `

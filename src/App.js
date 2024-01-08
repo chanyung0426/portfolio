@@ -14,6 +14,10 @@ function App() {
        <GlobalStyle/>
        <Main/>
        <Search/>
+       <Routes>
+        <Route path='/products/detail/:id' element={<AllProduct/>}/>
+       
+       </Routes>  
        
        <Outlet/>
      </AuthContextProvider>

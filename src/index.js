@@ -17,6 +17,8 @@ import Renter from './component/Renter';
 import Recruit from './component/Recruit';
 import Language from './component/Language';
 import UploadProduct from './page/UploadProduct';
+import CategoryPages from './page/CategoryPages';
+import ProductDetail from './page/ProductDetail';
 
 
 
@@ -31,11 +33,14 @@ const routes = createBrowserRouter([
       {path:'/menu', element : <Menu/>},
       {path:'/store', element : <Store/>},
       {path:'/new', element : <New/>},
-      {path:'/story', element : <Story/>},
+      {path:'/story', element : <Story/>},  
 
       {path:'/renter', element : <Renter/>},
       {path:'/recruit', element : <Recruit/>},
       {path:'/lang', element : <Language/>},
+
+      {path:'products/detail/:id', element : <ProductDetail/>},
+      {path:'products/:category', element: <CategoryPages/>},
  
       {
         path: '/product/upload',

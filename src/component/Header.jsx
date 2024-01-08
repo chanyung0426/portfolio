@@ -30,7 +30,6 @@ function Header() {
             <Navigation/>
             <Util/>
             
-            
             <div className='userWrap'>
                 {user && user.isAdmin &&
                 <Link to='/product/upload' className='uploadBtn'>업로드</Link>

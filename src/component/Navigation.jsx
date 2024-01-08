@@ -7,7 +7,7 @@ function Navigation() {
     return (
         <Nav>
             <ul>
-                <li><Link to='/menu'>MENU</Link></li>
+                <li><Link to='/menu'><Menu/>MENU</Link></li>
                 <li><Link to='/store'>STORE</Link></li>
                 <li><Link to='/new'>WHAT'S NEW</Link></li>
                 <li><Link to='/story'>STORY</Link></li>

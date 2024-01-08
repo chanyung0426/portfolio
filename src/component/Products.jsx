@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import DetailPageEvent from './DetailPageEvent'
+import ProductDetail from '../page/ProductDetail'
 
 function Products({products}) {
     return (
@@ -11,7 +12,6 @@ function Products({products}) {
                     <DetailPageEvent product={product}/>
                 </li>
             ))}
-
           </ProductList>  
         </>
     )

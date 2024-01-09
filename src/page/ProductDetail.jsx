@@ -26,9 +26,13 @@ function ProductDetail() {
 export default ProductDetail
 
 const DetailPage = styled.div`
-width: 100%;
+/* width: 100%; */
 display: flex;
 gap: 40px;
+width: 1168px;
+margin: 0 auto;
+margin-top: 250px; 
+
 .detailImg{
     max-width: 400px;
     img{
@@ -41,17 +45,19 @@ gap: 40px;
     flex-direction: column;
     gap: 20px;
     width: 100%;
+   
     h3{
-        font-size: 24px;
+        font-size: 35px;
         width: 100%;
-        font-weight: normal;
+        font-weight: 500;
         border-bottom: solid 1px rgba(0,0,0,0.1);
         padding-bottom: 20px;
     }
     p{
         width: 100%;
-        font-size: 16px;
+        font-size: 18px;
         color: #808080;
+        font-weight: 500;
     }
 }
 `

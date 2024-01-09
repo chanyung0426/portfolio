@@ -16,7 +16,7 @@ function App() {
        <Main/>
        <Search/>
        <Routes>
-        <Route path='/products/detail/:id' element={<ProductDetail/>}/>
+        {/* <Route path='/products/detail/:id' element={<ProductDetail/>}/>  */}
        
        </Routes>  
        

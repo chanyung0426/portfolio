@@ -6,6 +6,7 @@ import GlobalStyle from './style/GlobalStyle';
 import { AuthContextProvider } from './context/AuthContext';
 import { Outlet, Route, Routes } from 'react-router-dom';
 import AllProduct from './page/AllProduct';
+import ProductDetail from './page/ProductDetail';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
        <Main/>
        <Search/>
        <Routes>
-        <Route path='/products/detail/:id' element={<AllProduct/>}/>
+        <Route path='/products/detail/:id' element={<ProductDetail/>}/>
        
        </Routes>  
        

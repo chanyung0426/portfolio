@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import Menu from './Menu';
+import Menu from '../page/Menu';
 
 function Navigation() {
     return (

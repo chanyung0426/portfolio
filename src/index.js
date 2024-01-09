@@ -9,13 +9,13 @@ import './index.css';
 //컴포넌트
 import App from './App';
 import NotFound from './page/NotFound';
-import Menu from './component/Menu';
-import Store from './component/Store';
-import New from './component/Store';
-import Story from './component/Story';
-import Renter from './component/Renter';
-import Recruit from './component/Recruit';
-import Language from './component/Language';
+import Menu from './page/Menu';
+import Store from './page/Store';
+import New from './page/Store';
+import Story from './page/Story';
+import Renter from './page/Renter';
+import Recruit from './page/Recruit';
+import Language from './page/Language';
 import UploadProduct from './page/UploadProduct';
 import CategoryPages from './page/CategoryPages';
 import ProductDetail from './page/ProductDetail';
@@ -38,9 +38,9 @@ const routes = createBrowserRouter([
       {path:'/renter', element : <Renter/>},
       {path:'/recruit', element : <Recruit/>},
       {path:'/lang', element : <Language/>},
-
-      {path:'products/detail/:id', element : <ProductDetail/>},
-      {path:'products/:category', element: <CategoryPages/>},
+      
+      {path:'/products/detail/:id', element : <ProductDetail/>},
+      {path:'/products/:category', element: <CategoryPages/>},
  
       {
         path: '/product/upload',

@@ -1,7 +1,4 @@
 import React from 'react'
-import Renter from './Renter'
-import Recruit from './Recruit'
-import Language from './Language'
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 

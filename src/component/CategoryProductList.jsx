@@ -10,22 +10,14 @@ function CategoryProductList({category, product}) {
         setSortProducts(product)
     }, [product]);
     
-    const sortName = () =>{
-        const sortList = [...product].sort((a,b)=>{
-            if(!a.name || !b.name){
-                return 0
-            }
-            return a.name.charAt(0).localCompare(b.name.charAt(0))
-        })
-        setSortProducts(sortList);
-    }
+    
     return (
       
         <div className='container'>
         <h2>{category}</h2>
 
         <CategoryItem className='productList'>
-            {product.map((product)=>(
+            {sortProducts.map((product)=>(
                 <li key={product.id}>
                     <DetailPageEvent product={product}/>
                 </li>
@@ -39,7 +31,7 @@ function CategoryProductList({category, product}) {
 
 CategoryProductList.propTypes={
     category : PropTypes.string.isRequired,
-    product : PropTypes.arrayOf(PropTypes.Object).isRequired,
+    product : PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 export default CategoryProductList
 

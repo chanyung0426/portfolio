@@ -14,7 +14,8 @@ function DetailPageEvent({product}) {
             image : product.image,
             option : product.option,
             category : product.category,
-            allergic : product.allergic
+            allergic : product.allergic,
+            description : product.description
           }
         })
     }
@@ -26,7 +27,6 @@ function DetailPageEvent({product}) {
             <div className='textWrap'>
                  <h3 className='itemTitle'>{product.title}</h3>
                  <div className='itemFlex'>
-                    <p className='itemOption'>{product.option}</p>
                     <p className='itemAllergic'>{product.allergic}</p>
                  </div>
                  

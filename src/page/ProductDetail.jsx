@@ -4,12 +4,11 @@ import styled from 'styled-components';
 
 function ProductDetail() {
     const state = useLocation().state;
-    console.log(state)
-    const {id, image, title, description, category} = state;
+    const { image, title, description } = state;
 
     return (
         <div className='container'>
-             <DetailPage>
+            <DetailPage>
                 <div className='detailImg'>
                     <img src={image} alt={title}/>
                 </div>
@@ -19,6 +18,7 @@ function ProductDetail() {
                 </div>
                 
             </DetailPage>
+           
         </div>
     )
 }
@@ -47,6 +47,11 @@ gap: 40px;
         font-weight: normal;
         border-bottom: solid 1px rgba(0,0,0,0.1);
         padding-bottom: 20px;
+    }
+    p{
+        width: 100%;
+        font-size: 16px;
+        color: #808080;
     }
 }
 `

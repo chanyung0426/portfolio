@@ -1,4 +1,4 @@
-import { initializeApp } from "firebase/app";
+import { getApp, initializeApp } from "firebase/app";
 import {GoogleAuthProvider, getAuth, onAuthStateChanged, signInWithPopup, signOut} from "firebase/auth"
 import {set, ref, getDatabase, get} from 'firebase/database';
 import {v4 as uuid} from 'uuid'
@@ -101,4 +101,30 @@ export async function getCategoryProduct(category){
         }
         return[];
     })
+}
+
+//상품 검색
+export async function searchProducts(query){
+    try{
+        const dbRef = ref(database, 'products');
+        const snapshot = await get(dbRef);
+        if(snapshot.exists()){
+            const data = snapshot.val();
+            const allProducts = Object.values(data);
+            
+            if(allProducts.length === 0){
+                return[]
+            }
+            const matchProducts = allProducts.filter((product)=>{
+                const itemAllergic = product.allergic;
+                return itemAllergic.includes(query)
+            })
+
+            return matchProducts
+        }else{
+            return []
+        }
+    }catch(error){
+        
+    }
 }

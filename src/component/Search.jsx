@@ -1,50 +1,53 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { CiSearch } from "react-icons/ci";
-import { MdClear } from "react-icons/md";
 import styled from 'styled-components';
+import DetailPageEvent from './DetailPageEvent';
+import { query } from 'firebase/database';
+import { searchProducts } from '../api/firebase';
+
 
 
 function Search() {
-    const [text, setText] = useState('')
+    const searchRef = useRef();
+    //  
     const [visible, setVisible] = useState(false) //인풋창의 기본 속성 값
-    const [showClearBtn, setShowClearBtn] = useState('');
 
-     //검색어의 입력 여부를 보기 위해서 만든 상태변수 state
-     const [list, setList] = useState(false) //검색리스트가 있는지 여부
-     const [menuList, setMenuList] = useState([]); //검색결과 리스트 출력
-     const searchRef = useRef();
-     
-     let data = []; //햄버거메뉴 리스트가 들어올 변수
+    // const [list, setList] = useState('')
+    const [query, setQuery] = useState('');
+    const [result, setResult] = useState([]);
 
+    useEffect(()=>{
+        const fetchProducts = async()=>{
+            if(query.trim() === ''){
+                setResult([])
+            }else{
+                try{
+                    const txt = await searchProducts(query)
+                    setResult(txt);
+                }catch(error){
+                    console.error(error)
+                }
+            }
+        }
+        fetchProducts()
+    }, [query])
+
+    const onSearchEvent=(e)=>{
+        e.preventDefault()
+        setQuery(e.target.value);
+    }
+    
      const onToggleEvent = (e) =>{
         e.preventDefault();
         setVisible((prev)=>!prev)
      }
-     const onClear = (e) =>{
-        setText('');
-        setShowClearBtn(false)
-        setList(false);
-        setMenuList([]);
-     }
-     const inputChange = (e) =>{
-        setText(e.target.value)
-        setShowClearBtn(e.target.value.trim() !=='')
-        setList(true);
-        if(e.target.value.trim()){
-            fetch(setMenuList());
-            setList(true);
-        }else{
-            setMenuList([]);
-            setList(false);
-        }
-     }
      
-     // 엔터키 실행 막기
-     const enterPress = (e) =>{
-        if(e.key === 'Enter'){
-            e.preventDefault();
-        }
-     }
+    //  // 엔터키 실행 막기
+    //  const enterPress = (e) =>{
+    //     if(e.key === 'Enter'){
+    //         e.preventDefault();
+    //     }
+    //  }
 
      
     return (
@@ -54,30 +57,30 @@ function Search() {
         {visible &&(
             <input
             type='text'
-            value={text}
+            value={query}
             placeholder='알레르기 정보를 검색하실 수 있습니다.'
-            onChange={inputChange}
-            onKeyPress={enterPress}
-            >
-            </input>
+            onChange={onSearchEvent}
+            //onKeyPress={enterPress}
+            className='searchForm'
+            />
         )}
-
-        {showClearBtn &&(
-            <button className='clear-btn' onClick={onClear}><MdClear /></button>
-        )}    
+            <ul className='productList'>
+                {result.map((product)=>{
+                    <li>
+                        <DetailPageEvent key={product.id} product={product}/>
+                    </li>
+                })}
+            </ul>
         
         </SearchForm>
-            
-        
-        
-        
-        
-        
+
         </>
     )
 }
 
+
 export default Search
+
 
 const SearchForm = styled.form`
     display: flex;
@@ -100,15 +103,4 @@ const SearchForm = styled.form`
         display: flex;
         align-items: center;
     }
-    
-
 `
-
-/* 
-내가 이용 할 경우
-
-ex) 알러지 검색기능
-유사사이트 검색해서 참조
-
-
-*/

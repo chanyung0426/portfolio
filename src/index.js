@@ -19,6 +19,7 @@ import Language from './page/Language';
 import UploadProduct from './page/UploadProduct';
 import CategoryPages from './page/CategoryPages';
 import ProductDetail from './page/ProductDetail';
+import Search from './component/Search';
 
 
 
@@ -40,8 +41,9 @@ const routes = createBrowserRouter([
       {path:'/lang', element : <Language/>},
       
       {path:'/products/detail/:id', element : <ProductDetail/>},
-      {path:'/products/:category', element: <CategoryPages/>},
+      {path:'/products/:category', element : <CategoryPages/>},
  
+      // {path:'/search', element : <Search/>},
       {
         path: '/product/upload',
         element : <UploadProduct/>

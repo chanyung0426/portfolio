@@ -27,14 +27,14 @@ transform: translate(-50%, -50%);
 
     ul{
         display: flex;
-        gap: 100px;
+        gap: 60px;
         align-items: center;
         justify-content: center;
        
         li{
             list-style: none;
             a{
-                font-size: 20px;
+                font-size: 16px;
                 font-weight: bold;
                 text-decoration: none;
             }

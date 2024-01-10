@@ -5,8 +5,6 @@ import Search from './component/Search';
 import GlobalStyle from './style/GlobalStyle';
 import { AuthContextProvider } from './context/AuthContext';
 import { Outlet, Route, Routes } from 'react-router-dom';
-import AllProduct from './page/AllProduct';
-import ProductDetail from './page/ProductDetail';
 
 function App() {
   return (

@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import Util from './Util';
 import { googleLogOut, googleLogin, onUserState } from '../api/firebase';
 import UserData from './UserData';
+import Search from './Search';
 
 function Header() {
     const [user, setUser] = useState();
@@ -29,6 +30,7 @@ function Header() {
             <h1 className='logo'><Link to='/'><SiMcdonalds /></Link></h1>
             <Navigation/>
             <Util/>
+            <Search/>
             
             <div className='userWrap'>
                 {user && user.isAdmin &&

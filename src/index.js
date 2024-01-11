@@ -42,11 +42,10 @@ const routes = createBrowserRouter([
       
       {path:'/products/detail/:id', element : <ProductDetail/>},
       {path:'/products/:category', element : <CategoryPages/>},
- 
-      // {path:'/search', element : <Search/>},
-      {
-        path: '/product/upload',
-        element : <UploadProduct/>
+      
+      {path:'/search', element: <Search/>},
+
+      {path: '/product/upload', element : <UploadProduct/>
       }
 
     ]

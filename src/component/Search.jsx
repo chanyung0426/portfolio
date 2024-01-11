@@ -34,7 +34,7 @@ function Search() {
     }
      
     return (
-        <>
+      
         <SearchForm>
             <button className='search-btn'><CiSearch /></button>
        
@@ -56,7 +56,7 @@ function Search() {
         
         </SearchForm>
 
-        </>
+       
     )
 }
 

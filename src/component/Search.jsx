@@ -32,10 +32,15 @@ function Search() {
         setQuery(e.target.value);
         console.log(query)
     }
+    const enterPress = (e)=>{
+        if(e.key === 'Enter'){
+           e.preventDefault();
+        }
+    }
      
     return (
-      
-        <SearchForm>
+      <>
+       <SearchForm>
             <button className='search-btn'><CiSearch /></button>
        
             <input
@@ -44,18 +49,22 @@ function Search() {
             placeholder='알레르기 정보를 검색하실 수 있습니다.'
             onChange={onSearchEvent}
             className='searchForms'
+            onKeyPress={enterPress}
             />
 
-            <ul className='productList'>
-                {result.map((product)=>{
-                    <li>
-                        <DetailPageEvent key={product.id} product={product}/>
-                    </li>
-                })}
-            </ul>
-        
         </SearchForm>
 
+        <ProductList>
+                {result.map((product)=>{
+                    return(
+                    <li key={product.id}>
+                        <DetailPageEvent key={product.id} product={product}/>
+                    </li>
+                    )
+                    
+                })}
+        </ProductList>
+      </>
        
     )
 }
@@ -76,5 +85,20 @@ const SearchForm = styled.form`
         font-size: 36px;
         display: flex;
         align-items: center;
+    }
+`
+
+const ProductList = styled.ul`
+     margin-top: 50px;
+     display: flex;
+     flex-flow: row wrap;
+     gap: 20px;
+     justify-content: center;
+     align-items: center;
+     position: absolute;
+     top: 0;
+     left: 0;
+     li{
+        flex-shrink: 0;
     }
 `

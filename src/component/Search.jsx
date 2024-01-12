@@ -44,7 +44,7 @@ function Search() {
             <input
             type='text'
             value={query}
-            placeholder='알레르기 정보를 검색하실 수 있습니다.'
+            placeholder='알레르기 정보를 검색하세요.'
             onChange={onSearchEvent}
             className='searchForms'
             onKeyPress={enterPress}
@@ -95,10 +95,7 @@ const List = styled.ul`
      position: absolute;
      top: 0;
      left: 0;
-     overflow: hidden;
-     background: #ccc;
      li{
         flex-shrink: 0;
     }
-    
 `

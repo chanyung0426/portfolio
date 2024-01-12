@@ -19,9 +19,7 @@ import Language from './page/Language';
 import UploadProduct from './page/UploadProduct';
 import CategoryPages from './page/CategoryPages';
 import ProductDetail from './page/ProductDetail';
-import Search from './component/Search';
 import SearchResult from './page/SearchResult';
-
 
 
 const routes = createBrowserRouter([
@@ -43,12 +41,10 @@ const routes = createBrowserRouter([
       
       {path:'/products/detail/:id', element : <ProductDetail/>},
       {path:'/products/:category', element : <CategoryPages/>},
-      
-      {path:'/search', element: <Search/>},
-      {path:'/search/result', element:<SearchResult/>},
 
-      {path: '/product/upload', element : <UploadProduct/>
-      }
+      {path:'/search', element:<SearchResult/>},
+   
+      {path:'/product/upload', element : <UploadProduct/>}
 
     ]
   }

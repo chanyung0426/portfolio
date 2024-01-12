@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 function ProductDetail() {
     const state = useLocation().state;
-    const { image, title, description } = state;
+    const { image, title, description, price } = state;
 
     return (
         <div className='container'>
@@ -15,6 +15,7 @@ function ProductDetail() {
                 <div className='detailText'>
                     <h3>{title}</h3>
                     <p className='description'>{description}</p>
+                    <p className='price'>{price}</p>
                 </div>
                 
             </DetailPage>

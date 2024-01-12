@@ -4,6 +4,7 @@ import Main from './page/Main';
 import GlobalStyle from './style/GlobalStyle';
 import { AuthContextProvider } from './context/AuthContext';
 import { Outlet } from 'react-router-dom';
+import SearchResult from './page/SearchResult';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
      <AuthContextProvider>
        <GlobalStyle/>
        <Main/>
-      
+
        <Outlet/>
      </AuthContextProvider>
     </>

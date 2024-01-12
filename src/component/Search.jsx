@@ -30,7 +30,6 @@ function Search() {
     const onSearchEvent=(e)=>{
         e.preventDefault()
         setQuery(e.target.value);
-        console.log(query)
     }
     const enterPress = (e)=>{
         if(e.key === 'Enter'){
@@ -42,7 +41,6 @@ function Search() {
       <>
        <SearchForm>
             <button className='search-btn'><CiSearch /></button>
-       
             <input
             type='text'
             value={query}
@@ -51,19 +49,17 @@ function Search() {
             className='searchForms'
             onKeyPress={enterPress}
             />
-
         </SearchForm>
-
-        <ProductList>
-                {result.map((product)=>{
-                    return(
+        
+        <List>
+            {result.map((product)=>{
+                return(
                     <li key={product.id}>
                         <DetailPageEvent key={product.id} product={product}/>
                     </li>
                     )
-                    
                 })}
-        </ProductList>
+        </List>
       </>
        
     )
@@ -88,8 +84,9 @@ const SearchForm = styled.form`
     }
 `
 
-const ProductList = styled.ul`
-     margin-top: 50px;
+const List = styled.ul`
+     width: 100%;
+     margin-top: 140px;
      display: flex;
      flex-flow: row wrap;
      gap: 20px;
@@ -98,7 +95,10 @@ const ProductList = styled.ul`
      position: absolute;
      top: 0;
      left: 0;
+     overflow: hidden;
+     background: #ccc;
      li{
         flex-shrink: 0;
     }
+    
 `

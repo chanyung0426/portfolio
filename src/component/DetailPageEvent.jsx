@@ -15,7 +15,8 @@ function DetailPageEvent({product}) {
             option : product.option,
             category : product.category,
             allergic : product.allergic,
-            description : product.description
+            description : product.description,
+            price : product.price
           }
         })
     }
@@ -28,6 +29,7 @@ function DetailPageEvent({product}) {
                  <h3 className='itemTitle'>{product.title}</h3>
                  <div className='itemFlex'>
                     <p className='itemAllergic'>{product.allergic}</p>
+                    <p className='itemPrice'>{product.price}</p>
                  </div>
                  
             </div>    
@@ -45,18 +47,28 @@ const DetailItem = styled.div`
     margin-top: 140px;
     flex-direction: column;
     gap: 20px;
+
     .itemTitle{
-            font-size: 20px;
-            font-weight: normal;
+            font-size: 22px;
+            font-weight: bold;
             transition: 500ms;
-            color: rgba(0,0,0,1);;
+            color: rgba(0,0,0,1);
             &:hover{
                 color: rgba(0,0,0,0.5);
             }
-        .itemFlex{
+            .itemFlex{
             display: flex;
             justify-content: space-between;
+            padding-top: 14px;
         }
-
     }
+    .itemAllergic{
+            padding-top: 14px;
+    }
+  
+    .itemPrice{
+            padding-top: 14px;
+            color:  #44900c;
+    }
+
 `

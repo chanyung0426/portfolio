@@ -19,7 +19,12 @@ import Language from './page/Language';
 import UploadProduct from './page/UploadProduct';
 import CategoryPages from './page/CategoryPages';
 import ProductDetail from './page/ProductDetail';
-import SearchResult from './page/SearchResult';
+import Search from './component/Search';
+import StoreFind from './page/StoreFind';
+import Delivery from './page/Delivery';
+import DriveThru from './page/DriveThru';
+import Inquiry from './page/Inquiry';
+import StoreLocator from './component/StoreLocator';
 
 
 const routes = createBrowserRouter([
@@ -30,10 +35,16 @@ const routes = createBrowserRouter([
 
     children : [
       
-      {path:'/menu', element : <Menu/>},
+      {path:'/products', element : <Menu/>},
       {path:'/store', element : <Store/>},
       {path:'/new', element : <New/>},
-      {path:'/story', element : <Story/>},  
+      {path:'/story', element : <Story/>},
+      
+      //새로운 컴포넌트들 추가
+      { path: '/store/find', element: <StoreFind/> },
+      { path: '/store/delivery', element: <Delivery /> },
+      { path: '/store/drive-thru', element: <DriveThru /> },
+      { path: '/store/inquiry', element: <Inquiry /> },
 
       {path:'/renter', element : <Renter/>},
       {path:'/recruit', element : <Recruit/>},
@@ -42,7 +53,7 @@ const routes = createBrowserRouter([
       {path:'/products/detail/:id', element : <ProductDetail/>},
       {path:'/products/:category', element : <CategoryPages/>},
 
-      {path:'/search', element:<SearchResult/>},
+      {path:'/searchresult', element:<Search/>},
    
       {path:'/product/upload', element : <UploadProduct/>}
 

@@ -85,17 +85,17 @@ const SearchForm = styled.form`
 `
 
 const List = styled.ul`
-     width: 100%;
-     margin-top: 140px;
      display: flex;
      flex-flow: row wrap;
      gap: 20px;
      justify-content: center;
      align-items: center;
      position: absolute;
+     width: 100%;
+     margin-top: 100px;
+     padding-bottom: 5%;
      top: 0;
      left: 0;
-     li{
-        flex-shrink: 0;
-    }
+     background: #fff;
+     z-index: -9999;    
 `

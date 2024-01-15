@@ -14,9 +14,9 @@ const Navigation =()=> {
         <Nav>
             <ul>
                 <li className={`dropDown ${isDropdownOpen ? 'open' : ''}`}>
-                    <Link to='/menu' onClick={handleDropdownToggle}>
+                    <div onClick={handleDropdownToggle}>
                      MENU
-                    </Link>
+                    </div>
                     {isDropdownOpen && (
                         <div className='dropDownMenu'>
                                 <Menu/>                   
@@ -26,6 +26,7 @@ const Navigation =()=> {
                 <li><Link to='/store'>STORE</Link></li>
                 <li><Link to='/new'>WHAT'S NEW</Link></li>
                 <li><Link to='/story'>STORY</Link></li>
+                <li><Link to='/searchresult'>검색</Link></li>
             </ul>
         </Nav>
     )

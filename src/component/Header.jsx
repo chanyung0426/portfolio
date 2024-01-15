@@ -6,6 +6,8 @@ import styled from 'styled-components';
 import Util from './Util';
 import { googleLogOut, googleLogin, onUserState } from '../api/firebase';
 import UserData from './UserData';
+import SearchResult from '../page/SearchResult';
+import Search from './Search';
 
 function Header() {
     const [user, setUser] = useState();

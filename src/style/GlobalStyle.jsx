@@ -32,6 +32,7 @@ body {
 }
 a{
     text-decoration: none;
+	color: #3c3c3c;
 }
 ol, ul {
 	list-style: none;

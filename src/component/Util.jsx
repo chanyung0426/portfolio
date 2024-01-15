@@ -19,7 +19,9 @@ export default Util
 
 const UitilContainer = styled.div`
     width: 311px;
-    position: relative;
+    position: absolute;
+    top: 7px;
+    left: 13%;
     margin-right: auto;
     /* border: 2px solid gold; */
     ul{

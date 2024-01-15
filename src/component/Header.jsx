@@ -67,7 +67,7 @@ const HeaderContainer = styled.header`
         position: absolute;
         top: 0;
         left: 0;
-        margin: 15px 0px 0px 365px;
+        margin: 15px 61px;
         font-size: 100px;
         a{
             display: flex;
@@ -81,6 +81,7 @@ const HeaderContainer = styled.header`
     .userWrap{
         display: flex;
         margin-left: auto;
+        padding-right: 61px;
         align-items: center;
         gap: 12px;
         button{

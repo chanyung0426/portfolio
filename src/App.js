@@ -11,6 +11,7 @@ function App() {
      <AuthContextProvider>
        <GlobalStyle/>
        <Main/>
+       
        <Outlet/>
      </AuthContextProvider>
     </>

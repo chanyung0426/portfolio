@@ -20,11 +20,11 @@ import UploadProduct from './page/UploadProduct';
 import CategoryPages from './page/CategoryPages';
 import ProductDetail from './page/ProductDetail';
 import Search from './component/Search';
-import StoreFind from './page/StoreFind';
+import Kakao from './component/Kakao';
+
 import Delivery from './page/Delivery';
 import DriveThru from './page/DriveThru';
 import Inquiry from './page/Inquiry';
-import StoreLocator from './component/StoreLocator';
 
 
 const routes = createBrowserRouter([
@@ -41,7 +41,7 @@ const routes = createBrowserRouter([
       {path:'/story', element : <Story/>},
       
       //새로운 컴포넌트들 추가
-      { path: '/store/find', element: <StoreFind/> },
+      {path:'/store/find', element: <Kakao/>},
       { path: '/store/delivery', element: <Delivery /> },
       { path: '/store/drive-thru', element: <DriveThru /> },
       { path: '/store/inquiry', element: <Inquiry /> },

@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 
 function Store() {
     return (
-        <div>
+    
+      <div>
 
         <ul>
           <li><Link to='/store/find'>매장 찾기</Link></li>

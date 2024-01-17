@@ -25,6 +25,7 @@ import Kakao from './component/Kakao';
 import Delivery from './page/Delivery';
 import DriveThru from './page/DriveThru';
 import Inquiry from './page/Inquiry';
+import Promotion from './page/Promotion';
 
 
 const routes = createBrowserRouter([
@@ -40,15 +41,18 @@ const routes = createBrowserRouter([
       {path:'/new', element : <New/>},
       {path:'/story', element : <Story/>},
       
-      //새로운 컴포넌트들 추가
-      {path:'/store/find', element: <Kakao/>},
-      { path: '/store/delivery', element: <Delivery /> },
-      { path: '/store/drive-thru', element: <DriveThru /> },
-      { path: '/store/inquiry', element: <Inquiry /> },
-
-      {path:'/renter', element : <Renter/>},
+      {path:'/renter', element : <Inquiry/>},
       {path:'/recruit', element : <Recruit/>},
       {path:'/lang', element : <Language/>},
+
+      //store 서브 페이지
+      {path:'/store/find', element: <Kakao/>},
+      {path:'/store/delivery', element: <Delivery /> },
+      {path:'/store/drive-thru', element: <DriveThru /> },
+      {path:'/store/inquiry', element: <Inquiry /> },
+
+      //what's new 서브 페이지
+      {path:'/new/promotion', element: <Promotion/>},
       
       {path:'/products/detail/:id', element : <ProductDetail/>},
       {path:'/products/:category', element : <CategoryPages/>},

@@ -1,6 +1,6 @@
 import React, { useContext, useRef, useState } from 'react'
 import styled from 'styled-components';
-import { addProducts } from '../api/firebase';
+import { addImages, addProducts } from '../api/firebase';
 import { CategoryContext } from '../context/CategoryContext';
 import { upLoadimg } from '../api/imgupload';
 
@@ -33,7 +33,7 @@ function UploadProduct() {
         e.preventDefault();
         try{
             const url = await upLoadimg(file);
-            await addProducts(product, url)
+            await addImages(product, url)
             setSuccess('업로드가 완료되었습니다.');
             setTimeout(()=>{
                 setSuccess(null);
@@ -85,14 +85,14 @@ function UploadProduct() {
                     onChange={productInfoChange}
                     />
                     {/* 상품제목 */}
-                    
+{/*                     
                     <input
                     type='text'
                     name='allergic'
                     placeholder='알레르기명을 입력하세요'
                     value={product.allergic}
                     onChange={productInfoChange}
-                    />
+                    /> */}
 
                     <select name='category' value={product.category} onChange={productInfoChange}>
                         <option value=''>분류선택</option>

@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Renter() {
     return (
         <div>
-            renter
+           <Link to='/renter'>임차문의</Link>
         </div>
     )
 }

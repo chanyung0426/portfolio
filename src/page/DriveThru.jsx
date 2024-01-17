@@ -33,7 +33,7 @@ const DriveThruContainer = styled.div`
 p{
   position: absolute;
   top: 0;
-  left: 1%;
+  left: 0;
   margin-top: 250px;
   font-weight: 600;
   line-height: 1.5;
@@ -50,7 +50,7 @@ p{
   margin-top: 60px;
   border-radius: 10px;
   background: #f8f8f8;
-  padding: 20px;
+  padding: 30px;
 }
 
 

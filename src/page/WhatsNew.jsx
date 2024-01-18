@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 
 function New() {
     return (
@@ -12,7 +11,3 @@ function New() {
 }
 
 export default New
-
-const PromotionContainer = styled.div`
-    
-`

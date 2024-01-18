@@ -2,14 +2,17 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { getImages } from '../api/firebase';
 
-function Promotion() {
+function Promotion({image}) {
+
     const [imageList, setImageList] = useState([]);
 
     useEffect(()=>{
         const getImageList = async ()=>{
             try{
                 const images = await getImages();
-                setImageList(images)
+                const imageUrls = images.map(img => img.image);  
+                setImageList(imageUrls)
+                console.log(imageUrls)
             }
             catch(error){
                 console.error(error)
@@ -23,7 +26,12 @@ function Promotion() {
             <ul className='container'>
                 {imageList.map((imageUrl, index)=>(
                     <li key={index}>
-                        <div className='img' style={{backgroundImage: `url(${imageUrl})`}}></div>
+                        <div className='img' style={{ 
+                            backgroundImage: `url(${imageUrl})`,
+                            backgroundSize: 'cover',
+                            height: '300px',
+                            }}>
+                        </div>
                     </li>
                 ))}
             </ul>
@@ -37,7 +45,6 @@ const PromotionContainer = styled.div`
     width: 1168px;
     margin: 0 auto;
     margin-top: 200px;
-    background: #ccc;
     padding: 20px;
     
     .container{
@@ -48,10 +55,6 @@ const PromotionContainer = styled.div`
         li{
         flex-shrink: 0;
         flex-basis: 30%;
-        }
-        .img{
-        width: 366px;
-        height: 300px;
         }
 }
 `

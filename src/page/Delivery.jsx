@@ -70,6 +70,7 @@ const DeliveryContainer = styled.div`
   .delivery-form {
   max-width: 400px;
   margin: 0 auto;
+  padding: 30px 0 60px;  
 }
 
 fieldset {

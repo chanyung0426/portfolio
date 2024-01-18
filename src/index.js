@@ -13,19 +13,19 @@ import Menu from './page/Menu';
 import Store from './page/Store';
 import New from './page/Store';
 import Story from './page/Story';
-import Renter from './page/Renter';
 import Recruit from './page/Recruit';
 import Language from './page/Language';
 import UploadProduct from './page/UploadProduct';
 import CategoryPages from './page/CategoryPages';
 import ProductDetail from './page/ProductDetail';
 import Search from './component/Search';
-import Kakao from './component/Kakao';
 
 import Delivery from './page/Delivery';
 import DriveThru from './page/DriveThru';
 import Inquiry from './page/Inquiry';
 import Promotion from './page/Promotion';
+import BrandStory from './page/BrandStory';
+import McdonaldList from './api/McdonaldList';
 
 
 const routes = createBrowserRouter([
@@ -46,7 +46,7 @@ const routes = createBrowserRouter([
       {path:'/lang', element : <Language/>},
 
       //store 서브 페이지
-      {path:'/store/find', element: <Kakao/>},
+      {path:'/store/find', element: <McdonaldList/>},
       {path:'/store/delivery', element: <Delivery /> },
       {path:'/store/drive-thru', element: <DriveThru /> },
       {path:'/store/inquiry', element: <Inquiry /> },
@@ -54,6 +54,9 @@ const routes = createBrowserRouter([
       //what's new 서브 페이지
       {path:'/new/promotion', element: <Promotion/>},
       
+      //story 서브페이지
+      {path:'/story/brand', element: <BrandStory/>},
+
       {path:'/products/detail/:id', element : <ProductDetail/>},
       {path:'/products/:category', element : <CategoryPages/>},
 

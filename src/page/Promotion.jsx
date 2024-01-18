@@ -1,26 +1,57 @@
 import React, { useEffect, useState } from 'react'
+import styled from 'styled-components'
 import { getImages } from '../api/firebase';
-import Image from '../component/Image';
 
 function Promotion() {
-    const [image, setImage] = useState([]);
+    const [imageList, setImageList] = useState([]);
 
     useEffect(()=>{
-        const fetchImages = async()=>{
+        const getImageList = async ()=>{
             try{
                 const images = await getImages();
-                setImage(images)
-            }catch(error){
+                setImageList(images)
+            }
+            catch(error){
                 console.error(error)
             }
         }
-        fetchImages()
+        getImageList();
     },[])
+
     return (
-        <div className='container'>
-            <Image images={image}/>
-        </div>
+        <PromotionContainer>
+            <ul className='container'>
+                {imageList.map((imageUrl, index)=>(
+                    <li key={index}>
+                        <div className='img' style={{backgroundImage: `url(${imageUrl})`}}></div>
+                    </li>
+                ))}
+            </ul>
+        </PromotionContainer>
     )
 }
 
 export default Promotion
+
+const PromotionContainer = styled.div`
+    width: 1168px;
+    margin: 0 auto;
+    margin-top: 200px;
+    background: #ccc;
+    padding: 20px;
+    
+    .container{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        li{
+        flex-shrink: 0;
+        flex-basis: 30%;
+        }
+        .img{
+        width: 366px;
+        height: 300px;
+        }
+}
+`

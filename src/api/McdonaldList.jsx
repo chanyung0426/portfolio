@@ -1,11 +1,19 @@
 import React, { useEffect } from 'react';
+import styled from 'styled-components';
 
 const mcdonaldsLocations = [
-  { name: '서초뱅뱅점', location: '서울 서초구 강남대로 305, 101호(서초 현대렉시온)' },
-  { name: '강남 2호점', location: '서울 강남구 테헤란로 107 메디타워2층' },
-  { name: '서울교대점', location: '서울 서초구 서초대로 316(서초동)' },
-  { name: '양재점', location: '서울 서초구 강남대로 213' },
-  { name: '서초GS점', location: '서울 서초구 효령로49길 52 (서초동)' },
+  { name: '청담DT점', location: '서울 강남구 도산대로 407', call: '02-6207-1800'},
+  { name: '압구정CGV점', location: '서울 강남구 논현로 848 1층', call: '02-6207-2700'},
+  { name: '신사역점', location: '서울 강남구 도산대로 123 2층', call: '02-6203-6400'},
+  { name: '강남구청점', location: '서울 강남구 선릉로 667', call: '02-6204-6400'},
+  { name: '학동역점', location: '서울 강남구 논현로 667', call: '02-6203-5400'},
+  { name: '선릉점', location: '서울 강남구 테헤란로 326 아이타워 1층 103호', call: '02-6207-9100'},
+  { name: '코엑스점', location: '서울 강남구 영동대로 513 지하1층 A102호', call: '02-6743-3700'},
+  { name: '삼성역점', location: '서울 강남구 삼성로92길 29 도일빌딩 1층', call: '02-6203-4600'},
+  { name: '강남 2호점', location: '서울 강남구 테헤란로 107 메디타워2층', call: '02-6205-6400' },
+  { name: '서초뱅뱅점', location: '서울 서초구 강남대로 305, 101호(서초 현대렉시온)', call: '02-6227-4500' }, 
+  { name: '서울교대점', location: '서울 서초구 서초대로 316(서초동)', call: '02-6242-6400' },
+  { name: '양재점', location: '서울 서초구 강남대로 213', call: '02-6242-2100' },
   // 추가적인 맥도날드 매장 정보를 필요에 따라 입력
 ];
 
@@ -48,18 +56,51 @@ function McDonaldsStoreList() {
   };
 
   return (
-    <div>
+    <ListContainer>
       <h2>맥도날드 매장 목록</h2>
-      <div id="map" style={{ height: '600px', width: '1168px' }}></div>
-      <ul>
+      <div id="map" style={{ 
+            height: '600px', 
+            width: '1168px', 
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)' 
+            }}>
+            
+      </div>
+      <List>
         {mcdonaldsLocations.map((store, index) => (
           <li key={index}>
-            <strong>{store.name}</strong>: {store.location}
+            <strong>{store.name}</strong> : {store.location} : {store.call}
           </li>
         ))}
-      </ul>
-    </div>
+      </List>
+    </ListContainer>
   );
 }
 
 export default McDonaldsStoreList;
+
+const ListContainer = styled.div`
+  width: 1168px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -9999;
+  padding: 30px 0 60px;  
+`
+const List = styled.ul`
+  margin: 0 auto;
+  padding-top: 120%;  
+  li{
+    padding: 20px;
+    color: #808080;
+    border-bottom: 1px solid #000;
+    strong{
+      font-size: 20px;
+      font-weight: 600;
+      color: #000;
+    }
+  }
+`

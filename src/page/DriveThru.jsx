@@ -4,7 +4,7 @@ import styled from 'styled-components'
 function DriveThru() {
     return (
         <DriveThruContainer>
-        <h2>맥드라이브 페이지</h2>
+
         <p>운전 중에도 24시간 간편하고 빠르게!<br/>
         차 안에서 주문하고, 차 안에서 바로 받아 맛있는 맥도날드를 즐겨보세요.
         </p> 
@@ -23,6 +23,7 @@ function DriveThru() {
 export default DriveThru
 
 const DriveThruContainer = styled.div`
+  width: 1168px;
   position: absolute;
   margin-top: 200px;
   top: 50%;
@@ -32,8 +33,8 @@ const DriveThruContainer = styled.div`
   z-index: -9999;
 p{
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -10%;
+  left: 25%;
   margin-top: 250px;
   font-weight: 600;
   line-height: 1.5;
@@ -52,6 +53,5 @@ p{
   background: #f8f8f8;
   padding: 30px;
 }
-
 
 `

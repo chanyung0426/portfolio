@@ -62,7 +62,7 @@ const HeaderContainer = styled.header`
     padding: 6px 22px;
     box-sizing: border-box;
     background: #ffffff;
-    border: 2px solid red;
+    border-bottom: 2px solid red;
     width: 100%;
     height: 140px;
     .logo{

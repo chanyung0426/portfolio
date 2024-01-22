@@ -8,9 +8,7 @@ function Util() {
             <ul>
                 <li><Link to='/renter'>임차문의</Link></li>
                 <li><Link to='/recruit'>RECRUIT</Link></li>
-                <li><Link to='/lang'>LANG</Link></li>
             </ul>
-
         </UitilContainer>
     )
 }
@@ -57,19 +55,6 @@ const UitilContainer = styled.div`
                 line-height: 35px;
                 text-align: center;
                 padding-left: 15px;
-                text-decoration: none;
-                color: #fff;
-            }
-        }
-        li:last-child{
-            background: #264a36;
-            border-radius: 48px;
-            a{  
-                font-size: 13px;
-                font-weight: 600;
-                line-height: 35px;
-                text-align: center;
-                padding-left: 22px;
                 text-decoration: none;
                 color: #fff;
             }

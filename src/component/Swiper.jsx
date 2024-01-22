@@ -1,16 +1,27 @@
 import React from 'react'
-import {Swiper, SwiperSlide} from 'swiper/react';
+import React, { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
-import 'swiper/css';    
+import "swiper/css";
+import "swiper/css/pagination";
+
+import { Pagination } from "swiper";
 
 function Swiper() {
     return (
-        <Swiper>
-            <SwiperSlide>Slide1</SwiperSlide>
-            <SwiperSlide>Slide2</SwiperSlide>
-            <SwiperSlide>Slide3</SwiperSlide>
-            <SwiperSlide>Slide4</SwiperSlide>
-        </Swiper>
+        <Swiper
+        pagination={true} modules={[Pagination]} className="mySwiper"
+        spaceBetween={50}
+        slidesPerView={3}
+        onSlideChange={() => console.log('slide change')}
+        onSwiper={(swiper) => console.log(swiper)}
+      >
+        <SwiperSlide><img/>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+      </Swiper>
     )
 }
 

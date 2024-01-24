@@ -6,7 +6,7 @@ function Main() {
     return (
         <div>
             <Header/>
-            <Swiper/>
+            {/* <Swiper/> */}
         </div>
     )
 }

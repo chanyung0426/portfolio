@@ -52,11 +52,11 @@ function Swiper() {
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       >
-        <SwiperSlide><img src={img1} alt="swiper01" />1</SwiperSlide>
-        <SwiperSlide><img src={img2} alt="swiper02" />2</SwiperSlide>
-        <SwiperSlide><img src={img3} alt="swiper03" />3</SwiperSlide>
-        <SwiperSlide><img src={img4} alt="swiper04" />4</SwiperSlide>
-        <SwiperSlide><img src={img5} alt="swiper05" />5</SwiperSlide>
+        <SwiperSlide><img src={img1} alt="swiper01" />01</SwiperSlide>
+        <SwiperSlide><img src={img2} alt="swiper02" />02</SwiperSlide>
+        <SwiperSlide><img src={img3} alt="swiper03" />03</SwiperSlide>
+        <SwiperSlide><img src={img4} alt="swiper04" />04</SwiperSlide>
+        <SwiperSlide><img src={img5} alt="swiper05" />05</SwiperSlide>
       </StyledSwiper>
     )
 }

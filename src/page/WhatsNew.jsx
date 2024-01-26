@@ -5,8 +5,8 @@ function New() {
     return (
         <div>
             <li><Link to='/new/promotion'>프로모션</Link></li>
-            <li>새로운 소식</li>
-            <li>이달의 해피밀</li>
+            <li><Link to='/new/news'>이달의 소식</Link></li>
+            <li><Link to='/new/happymeal'>이달의 해피밀</Link></li>
         </div>
     )
 }

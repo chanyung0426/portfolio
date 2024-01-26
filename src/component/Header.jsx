@@ -6,8 +6,6 @@ import styled from 'styled-components';
 import Util from './Util';
 import { googleLogOut, googleLogin, onUserState } from '../api/firebase';
 import UserData from './UserData';
-import SearchResult from '../page/SearchResult';
-import Search from './Search';
 
 function Header() {
     const [user, setUser] = useState();
@@ -62,15 +60,15 @@ const HeaderContainer = styled.header`
     padding: 6px 22px;
     box-sizing: border-box;
     background: #ffffff;
-    border-bottom: 2px solid red;
     width: 100%;
-    height: 140px;
+    height: 108px;
+    border-bottom: 1px solid #ccc;
     .logo{
         position: absolute;
         top: 0;
         left: 0;
-        margin: 15px 61px;
-        font-size: 100px;
+        margin: 0px 61px;
+        font-size: 108px;
         a{
             display: flex;
             align-items: center;

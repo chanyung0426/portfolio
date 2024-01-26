@@ -11,7 +11,7 @@ import App from './App';
 import NotFound from './page/NotFound';
 import Menu from './page/Menu';
 import Store from './page/Store';
-import New from './page/Store';
+import WhatsNew from './page/WhatsNew';
 import Story from './page/Story';
 import Recruit from './page/Recruit';
 import Language from './page/Language';
@@ -38,7 +38,7 @@ const routes = createBrowserRouter([
       
       {path:'/products', element : <Menu/>},
       {path:'/store', element : <Store/>},
-      {path:'/new', element : <New/>},
+      {path:'/new', element : <WhatsNew/>},
       {path:'/story', element : <Story/>},
       
       {path:'/renter', element : <Inquiry/>},
@@ -53,6 +53,8 @@ const routes = createBrowserRouter([
 
       //what's new 서브 페이지
       {path:'/new/promotion', element: <Promotion/>},
+      {path:'/new/news', element: <NotFound/>},
+      {path:'/new/happymeal', element: <NotFound/>},
       
       //story 서브페이지
       {path:'/story/brand', element: <BrandStory/>},

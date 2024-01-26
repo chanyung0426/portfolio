@@ -16,9 +16,9 @@ function Util() {
 export default Util
 
 const UitilContainer = styled.div`
-    width: 311px;
+    width: 160px;
     position: absolute;
-    top: 7px;
+    top: -9px;
     left: 13%;
     margin-right: auto;
     /* border: 2px solid gold; */
@@ -47,14 +47,14 @@ const UitilContainer = styled.div`
             }
         }
         li:nth-child(2){
-            background: #d87e00;
+            background: #264a36;
             border-radius: 48px;
             a{  
                 font-size: 13px;
                 font-weight: 600;
                 line-height: 35px;
                 text-align: center;
-                padding-left: 15px;
+                padding-left: 14px;
                 text-decoration: none;
                 color: #fff;
             }

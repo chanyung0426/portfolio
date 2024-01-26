@@ -32,7 +32,10 @@ body {
 }
 a{
     text-decoration: none;
-	color: #3c3c3c;
+	color: #808080;
+}
+span{
+	color: #3C3C3C;
 }
 ol, ul {
 	list-style: none;

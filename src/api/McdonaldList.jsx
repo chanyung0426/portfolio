@@ -64,7 +64,9 @@ function McDonaldsStoreList() {
             position: 'absolute',
             top: '50%',
             left: '50%',
-            transform: 'translate(-50%, -50%)' 
+            transform: 'translate(-50%, -50%)',
+            marginTop: '100px',
+            borderRadius: '10px'
             }}>
             
       </div>
@@ -92,7 +94,7 @@ const ListContainer = styled.div`
 `
 const List = styled.ul`
   margin: 0 auto;
-  padding-top: 120%;  
+  padding-top: 140%;  
   li{
     padding: 20px;
     color: #808080;

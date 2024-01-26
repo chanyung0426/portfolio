@@ -48,8 +48,7 @@ function Swiper() {
       modules={[Navigation, Pagination]}
       spaceBetween={50}
       slidesPerView={3}
-      navigation
-      pagination={{ clickable: true }}
+      pagination={{ clickable: true }}  
       scrollbar={{ draggable: true }}
       >
         <SwiperSlide><img src={img1} alt="swiper01" />01</SwiperSlide>

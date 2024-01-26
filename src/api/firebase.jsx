@@ -12,7 +12,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const provider = new GoogleAuthProvider();
-const auth = getAuth();
+const auth = getAuth(); 
 const database = getDatabase(app);
 
 //자동로그인 방지

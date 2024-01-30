@@ -44,7 +44,6 @@ export default DetailPageEvent
 
 const DetailItem = styled.div`
     display: flex;
-    margin-top: 140px;
     flex-direction: column;
     gap: 20px;
 

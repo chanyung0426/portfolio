@@ -38,7 +38,7 @@ const BrandContainer = styled.div`
     width: 1168px;
     margin: 0 auto;
     margin-top: 150px;
-    padding: 30px 0 40%;
+    padding: 30px 0 35%;
     h1{
         margin: 0 0px 60px;
         font-size: 22px;
@@ -68,19 +68,19 @@ const BrandContainer = styled.div`
         font-weight: 600;
         width: 50%;
         margin-top: 85px;
-        padding-left: 25px;
+        padding-left: 50px;
     }
     .kor{
         float: left;
         width: 50%;
         margin-top: 80px;
-        padding-left: 25px;
+        padding-left: 50px;
     }
     .kor2{
         float: left;
         width: 50%;
         margin-top: 80px;
-        padding-left: 25px;
+        padding-left: 50px;
     }
 `
 export const Outbox = styled.div`

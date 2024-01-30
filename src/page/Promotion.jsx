@@ -47,7 +47,7 @@ const PromotionContainer = styled.div`
     width: 1168px;
     margin: 0 auto;
     margin-top: 200px;
-    padding: 20px;
+    padding: 30px 0 60px;
     
     .container{
         display: flex;

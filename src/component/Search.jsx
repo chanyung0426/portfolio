@@ -73,10 +73,10 @@ const SearchForm = styled.form`
     display: flex;
     position: fixed;
     top: 0px;
-    right: 350px;
+    right: 265px;
     transition: 500ms;
-    z-index: 11;
     width: 36px;
+    z-index: 11;
     .search-btn{
         font-size: 36px;
         display: flex;
@@ -90,12 +90,9 @@ const List = styled.ul`
      gap: 20px;
      justify-content: center;
      align-items: center;
-     position: absolute;
      width: 100%;
-     margin-top: 100px;
-     padding-bottom: 5%;
      top: 0;
      left: 0;
-     background: #fff;
-     z-index: -9999;    
+     padding: 140px 0px 5%;
+     z-index: -9999;
 `

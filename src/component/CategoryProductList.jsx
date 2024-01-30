@@ -36,11 +36,17 @@ CategoryProductList.propTypes={
 export default CategoryProductList
 
 const CategoryItem = styled.ul`
+    width: 1168px;
+    margin: 0 auto;
     display: flex;
-    gap: 20px 5%;
     flex-wrap: wrap;
+    margin-top: 140px;
     li{
+        height: 350px;
         flex-shrink: 0;
-        flex-basis: 30%;
+        background: #ffe88a;
+        border-radius: 10px;
+        margin: 0 0 35px 35px;
+        padding: 20px;
     }
 `

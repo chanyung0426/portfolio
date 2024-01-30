@@ -76,7 +76,7 @@ body{
 	overflow-y: hidden;
 }
 body,html{
-	background: #fffff;
+	background: #fff;
 }
 `
 

@@ -67,74 +67,74 @@ const DeliveryForm = () => {
 export default DeliveryForm;
 
 const DeliveryContainer = styled.div`
+  padding: 30px 0 60px;  
+
   .delivery-form {
   max-width: 400px;
   margin: 0 auto;
-  padding: 30px 0 60px;  
-}
+  }
 
-fieldset {
+  fieldset {
   width: 50%;
   margin: 0 auto;
   border: 1px solid #ddd;
-  padding: 0px 60px;
-  margin-top: 250px;
+  margin-top: 140px;
   border: none;
   z-index: -9999;
-}
+  }
 
-fieldset div{
+  fieldset div{
   padding-top: 16px;
-}
+  }
 
-legend {
+  legend {
   font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 10px;
-}
+  }
 
-.form-group {
+  .form-group {
   margin-bottom: 15px;
-}
+  }
 
-label {
+  label {
   display: block;
   margin-bottom: 5px;
-}
+  }
 
-input {
+  input {
   width: 100%;
   padding: 8px;
   box-sizing: border-box;
   border: 1px solid #ccc;
-}
+  }
 
-button {
+  button {
   background-color: #ffbc0d;
   color: #000;
   padding: 10px 15px;
   border: none;
   cursor: pointer;
   font-size: 1em;
-}
+  }
 
-button:hover {
+  button:hover {
   background-color: #ffbc0d;
-}
+  }
 
-ul{
+  ul{
   width: 50%;
   margin: 0 auto;
   padding: 100px 0px 0px 30px;
-}
+  }
 
-ul > li{
+  ul > li{
     font-weight: 600;
     color: #808080;
     line-height: 1.9;
-}
+  }
 
-ul > li:before {
+  ul > li:before {
     content: '';
     display: inline-block;
     width: 6px;
@@ -143,5 +143,7 @@ ul > li:before {
     vertical-align: middle;
     border-radius: 100%;
     background: #ffbb0a;
-}
+  }
+
+
 `

@@ -33,9 +33,9 @@ const DriveThruContainer = styled.div`
   z-index: -9999;
 p{
   position: absolute;
-  top: -10%;
-  left: 25%;
-  margin-top: 250px;
+  top: 0;
+  left: 10;
+  margin-top: 140px;
   font-weight: 600;
   line-height: 1.5;
   color: #808080;
@@ -45,10 +45,8 @@ p{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  overflow: hidden;
   width: 1168px;
   height: 657px;
-  margin-top: 60px;
   border-radius: 10px;
   background: #f8f8f8;
   padding: 30px;

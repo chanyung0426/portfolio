@@ -14,7 +14,6 @@ import Store from './page/Store';
 import WhatsNew from './page/WhatsNew';
 import Story from './page/Story';
 import Recruit from './page/Recruit';
-import Language from './page/Language';
 import UploadProduct from './page/UploadProduct';
 import CategoryPages from './page/CategoryPages';
 import ProductDetail from './page/ProductDetail';
@@ -26,6 +25,7 @@ import Inquiry from './page/Inquiry';
 import Promotion from './page/Promotion';
 import BrandStory from './page/BrandStory';
 import McdonaldList from './api/McdonaldList';
+import Facebook from './component/Facebook';
 
 
 const routes = createBrowserRouter([
@@ -43,7 +43,6 @@ const routes = createBrowserRouter([
       
       {path:'/renter', element : <Inquiry/>},
       {path:'/recruit', element : <Recruit/>},
-      {path:'/lang', element : <Language/>},
 
       //store 서브 페이지
       {path:'/store/find', element: <McdonaldList/>},
@@ -59,6 +58,9 @@ const routes = createBrowserRouter([
       //story 서브페이지
       {path:'/story/brand', element: <BrandStory/>},
 
+      //sns
+  
+      
       {path:'/products/detail/:id', element : <ProductDetail/>},
       {path:'/products/:category', element : <CategoryPages/>},
 

@@ -7,7 +7,7 @@ function Main() {
     return (
         <div>
             <Header/>
-            <Footer/>
+            {/* <Footer/> */}
         </div>
     )
 }

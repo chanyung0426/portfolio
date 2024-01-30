@@ -14,7 +14,6 @@ const mcdonaldsLocations = [
   { name: '서초뱅뱅점', location: '서울 서초구 강남대로 305, 101호(서초 현대렉시온)', call: '02-6227-4500' }, 
   { name: '서울교대점', location: '서울 서초구 서초대로 316(서초동)', call: '02-6242-6400' },
   { name: '양재점', location: '서울 서초구 강남대로 213', call: '02-6242-2100' },
-  // 추가적인 맥도날드 매장 정보를 필요에 따라 입력
 ];
 
 function McDonaldsStoreList() {
@@ -55,6 +54,7 @@ function McDonaldsStoreList() {
     });
   };
 
+
   return (
     <ListContainer>
       <h2>맥도날드 매장 목록</h2>
@@ -67,13 +67,12 @@ function McDonaldsStoreList() {
             transform: 'translate(-50%, -50%)',
             marginTop: '100px',
             borderRadius: '10px'
-            }}>
-            
+            }}> 
       </div>
       <List>
         {mcdonaldsLocations.map((store, index) => (
           <li key={index}>
-            <strong>{store.name}</strong> : {store.location} : {store.call}
+          <strong>{store.name}</strong> : {store.location} : {store.call}
           </li>
         ))}
       </List>

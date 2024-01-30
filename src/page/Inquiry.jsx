@@ -76,7 +76,7 @@ const InquiryContainer = styled.div`
     width: 1168px;
     height: 1000px;
     margin: 0 auto;
-    margin-top: 250px;
+    margin-top: 200px;
     color: #808080;
     font-size: 16px;
     font-weight: 500;

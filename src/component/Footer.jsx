@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components';
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -20,10 +20,10 @@ function Footer() {
             </ul>
             
             <ul className='fSNS'>
-                <li><Link to='/https://www.facebook.com/McDonaldsKorea' target="_blank"><FaFacebook /></Link></li>
-                <li><Link to='/https://www.instagram.com/mcdonalds_kr/' target="_blank"><FaInstagram /></Link></li>
-                <li><Link to='/https://www.youtube.com/user/McDonaldsKor' target="_blank"><FaYoutube /></Link></li>
-                <li><Link to='/https://story.kakao.com/ch/mcdonalds/feed'><SiKakaotalk /></Link></li>
+                <li><Link to='https://www.facebook.com/McDonaldsKorea' target="_blank"><FaFacebook /></Link></li>
+                <li><Link to='https://www.instagram.com/mcdonalds_kr/' target="_blank"><FaInstagram /></Link></li>
+                <li><Link to='https://www.youtube.com/user/McDonaldsKor' target="_blank"><FaYoutube /></Link></li>
+                <li><Link to='https://story.kakao.com/ch/mcdonalds/feed' target="_blank"><SiKakaotalk /></Link></li>
             </ul>
 
             <ul className='fInfo'>

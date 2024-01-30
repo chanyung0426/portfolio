@@ -10,8 +10,8 @@ function App() {
     <>
      <AuthContextProvider>
        <GlobalStyle/>
-       <Main/>
-       <Outlet/>
+         <Main/>
+         <Outlet/> 
      </AuthContextProvider>
     </>
   );

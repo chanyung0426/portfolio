@@ -63,6 +63,7 @@ const HeaderContainer = styled.header`
     width: 100%;
     height: 108px;
     border-bottom: 1px solid #ccc;
+    z-index: 10;
     .logo{
         position: absolute;
         top: 0;

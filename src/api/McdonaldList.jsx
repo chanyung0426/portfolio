@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const mcdonaldsLocations = [
@@ -17,6 +17,8 @@ const mcdonaldsLocations = [
 ];
 
 function McDonaldsStoreList() {
+  const [infoWindows, setInfoWindows] = useState([]);
+
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://dapi.kakao.com/v2/maps/sdk.js?appkey=cbad930b23de0be4f69ac3c477803db7&libraries=services';
@@ -44,11 +46,33 @@ function McDonaldsStoreList() {
       const geocoder = new window.kakao.maps.services.Geocoder();
       geocoder.addressSearch(store.location, (result, status) => {
         if (status === window.kakao.maps.services.Status.OK) {
+          
           const marker = new window.kakao.maps.Marker({
             position: new window.kakao.maps.LatLng(result[0].y, result[0].x),
             map: map,
             title: store.name,
           });
+
+          const infowindow = new window.kakao.maps.InfoWindow({
+            content:`
+            <div style="
+            padding: 5px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #f20000;
+            ">
+            ${store.name}
+            </div>
+            `,
+          });
+
+          window.kakao.maps.event.addListener(marker, 'click', function () {
+            // Close all other info windows before opening a new one
+            infoWindows.forEach((iw) => iw.close());
+            infowindow.open(map, marker);
+          });
+
+          setInfoWindows((prevWindows) => [...prevWindows, infowindow]);
         }
       });
     });

@@ -41,19 +41,14 @@ function Footer() {
 export default Footer
 
 const FooterContainer = styled.footer`
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 250px;
     color: #fff;
     font-size: 14px;
     line-height: 1.6;
     text-align: center;
     background: #292929;
     margin-top: auto;
+    padding-bottom: 30px;
 `
-
 const List = styled.div`
     width: 1168px;
     margin: 0 auto;

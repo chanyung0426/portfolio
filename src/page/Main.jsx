@@ -12,6 +12,8 @@ import img03 from '../img/swiper03.jpg';
 import img04 from '../img/swiper04.jpg';
 import img05 from '../img/swiper05.jpg';
 
+import Footer from '../component/Footer';
+
 function MySwiper() {
 
     useEffect(()=>{
@@ -64,6 +66,9 @@ function MySwiper() {
                 <div className='swiper-pagination'></div>
              </div>
             </SwiperContainer>
+
+            {/* <MenuSwiper/> */}
+           
         </div>
     )
 }

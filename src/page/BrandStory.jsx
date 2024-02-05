@@ -38,7 +38,7 @@ const BrandContainer = styled.div`
     width: 1168px;
     margin: 0 auto;
     margin-top: 150px;
-    padding: 30px 0 35%;
+    padding: 30px 0 5%;
     h1{
         margin: 0 0px 60px;
         font-size: 22px;
@@ -57,10 +57,13 @@ const BrandContainer = styled.div`
     }
     p{
         margin-top: 5px;
-        font-size: 16px;
+        font-size: 14px;
         color: #808080;
         font-weight: 500;
         line-height: 1.9;
+    }
+    .txtInfo{
+        font-weight: bold;
     }
     strong{
         float: left;
@@ -75,12 +78,14 @@ const BrandContainer = styled.div`
         width: 50%;
         margin-top: 80px;
         padding-left: 50px;
+        font-weight: bold;
     }
     .kor2{
         float: left;
         width: 50%;
-        margin-top: 80px;
+        margin-top: 50px;
         padding-left: 50px;
+        font-weight: bold;
     }
 `
 export const Outbox = styled.div`

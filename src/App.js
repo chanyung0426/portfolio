@@ -5,6 +5,7 @@ import GlobalStyle from './style/GlobalStyle';
 import { AuthContextProvider } from './context/AuthContext';
 import { Outlet, Route, Routes } from 'react-router-dom';
 import Header from './component/Header';
+import Footer from './component/Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
            <Route path='/' element={<Main/>}/>
          </Routes>
          <Outlet/> 
+         <Footer/>
      </AuthContextProvider>
     </>
   );

@@ -93,6 +93,6 @@ const List = styled.ul`
      width: 100%;
      top: 0;
      left: 0;
+     margin-top: 50px;
      padding: 140px 0px 5%;
-     z-index: -9999;
 `

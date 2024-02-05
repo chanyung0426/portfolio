@@ -46,7 +46,7 @@ export default Promotion
 const PromotionContainer = styled.div`
     width: 1168px;
     margin: 0 auto;
-    margin-top: 200px;
+    margin-top: 150px;
     padding: 30px 0 60px;
     
     .container{

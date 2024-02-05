@@ -76,11 +76,12 @@ const InquiryContainer = styled.div`
     width: 1168px;
     height: 1000px;
     margin: 0 auto;
-    margin-top: 200px;
+    margin-top: 150px;
     color: #808080;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.9;
+    padding: 30px 0 5%;
     .titDep3{
         display: block;
         color: #292929;

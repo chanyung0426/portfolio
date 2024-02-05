@@ -81,14 +81,9 @@ function McDonaldsStoreList() {
 
   return (
     <ListContainer>
-      <h2>맥도날드 매장 목록</h2>
       <div id="map" style={{ 
             height: '600px', 
             width: '1168px', 
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
             marginTop: '100px',
             borderRadius: '10px'
             }}> 
@@ -107,17 +102,13 @@ function McDonaldsStoreList() {
 export default McDonaldsStoreList;
 
 const ListContainer = styled.div`
-  width: 1168px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -9999;
+  margin: 0 auto;
+  margin-top: 50px;
   padding: 30px 0 60px;  
 `
 const List = styled.ul`
   margin: 0 auto;
-  padding-top: 140%;  
+  padding-top: 80px;  
   li{
     padding: 20px;
     color: #808080;

@@ -40,7 +40,7 @@ const Container = styled.div`
 width: 1168px;
 margin: 0 auto;
 margin-top: 150px;
-padding: 30px 0 40%;
+padding: 30px 0 5%;
 .inner02{
     width:100%;
     margin-top: 70px;
@@ -52,6 +52,7 @@ padding: 30px 0 40%;
     margin-top: 60px;
     padding-left: 20px;
     color: #808080;
+    font-size: 18px;
     font-weight: 600;
     line-height: 1.9;
 }
@@ -60,6 +61,7 @@ padding: 30px 0 40%;
     width: 45%;
     margin-top: 80px;
     color: #808080;
+    font-size: 18px;
     font-weight: 600;
     line-height: 1.9;
 }
@@ -73,7 +75,7 @@ padding: 30px 0 40%;
     
     display: inline-block;
     color: #292929;
-    font-weight: 600;
+    font-weight: bold;
     background: #ffbc0d;
 }
 .submit2{
@@ -86,7 +88,7 @@ padding: 30px 0 40%;
     
     display: inline-block;
     color: #292929;
-    font-weight: 600;
+    font-weight: bold;
     background: #ffbc0d;
 }
 `

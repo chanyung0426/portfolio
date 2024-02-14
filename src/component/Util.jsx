@@ -60,4 +60,8 @@ const UitilContainer = styled.div`
             }
         }
     }
+
+    @media (max-width: 1280px){
+        display: none;
+    }
 `

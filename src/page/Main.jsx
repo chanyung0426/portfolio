@@ -11,8 +11,8 @@ import img02 from '../img/swiper02.jpg';
 import img03 from '../img/swiper03.jpg';
 import img04 from '../img/swiper04.jpg';
 import img05 from '../img/swiper05.jpg';
+import MainInner from '../component/MainInner';
 
-import Footer from '../component/Footer';
 
 function MySwiper() {
 
@@ -41,7 +41,7 @@ function MySwiper() {
     }, []);
 
     return (
-        <div>
+        <MainContainer>
             <SwiperContainer> 
              <div className='swiper-container'>
                 <div className='swiper-wrapper'>
@@ -67,13 +67,20 @@ function MySwiper() {
              </div>
             </SwiperContainer>
 
-            {/* <MenuSwiper/> */}
-           
-        </div>
+            <MainInner/>
+        </MainContainer>
     )
 }
 
 export default MySwiper
+
+const MainContainer = styled.div`
+    @media (min-width: 1024px){
+        width: 100%;
+
+    }
+`
+
 
 const SwiperContainer = styled.div`
     position: relative;
@@ -110,29 +117,16 @@ const SwiperContainer = styled.div`
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            width: 30px;
-            height: 30px;
+            width: 50px;
+            height: 50px;
             background-color: rgba(255, 255, 255, 0.7);
             border-radius: 50%;
+          
             cursor: pointer;
 
             &:after {
                 font-size: 20px;
                 color: #333;
-            }
-        }
-
-        .swiper-button-next {
-            right: 10px;
-            &:after {
-                content: '>';
-            }
-        }
-
-        .swiper-button-prev {
-            left: 10px;
-            &:after {
-                content: '<';
             }
         }
 

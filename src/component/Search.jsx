@@ -84,7 +84,7 @@ const SearchForm = styled.form`
     }
 `
 
-const List = styled.ul`
+const List = styled.ul`     
      display: flex;
      flex-flow: row wrap;
      gap: 20px;

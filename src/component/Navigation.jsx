@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Menu from '../page/Menu';
@@ -6,54 +6,63 @@ import Store from '../page/Store';
 import WhatsNew from '../page/WhatsNew';
 import Story from '../page/Story';
 
+//dropdown menu component
+const DropdownMenu = ({children})=>{
+    return (
+        <ul className='subMenu'>
+            <li>{children}</li>
+        </ul>
+    )
+}
+
 function Navigation() {
 
-    const [isDropdownOpen, setDropdownOpen] = useState(false);
+    const [activeMenu, setActiveMenu] = useState(null);
+    const timeoutRef = useRef(null); //timeout을 관리하기 위한 ref
+
+    const handleMouseEnter = (menuName) => () => {
+        clearTimeout(timeoutRef.current); // 이전에 설정된 timeout을 제거
+        timeoutRef.current = setTimeout(() => {
+            setActiveMenu(menuName);
+        }, 100); // 100ms 지연 후 메뉴 활성화
+    }
+
+    const handleMouseLeave = () =>{
+        clearTimeout(timeoutRef.current); //이전에 설정된 timeout을 제거
+        timeoutRef.current = setTimeout(()=>{
+            setActiveMenu(null);
+        }, 100); //100ms 지연 후 메뉴 비활성화
+    };
     
     return (
         <Nav>
             <ul>
-                <li onMouseEnter={()=>setDropdownOpen(true)}
-                    onMouseLeave={()=>setDropdownOpen(false)}>
-                        <Link to={`/products/버거`}><span>MENU</span></Link>
-                     {isDropdownOpen && (
-                        <ul className='subMenu'>    
-                            <li><Menu/></li>
-                        </ul>
-                     )}
+                <li onMouseEnter={handleMouseEnter('MENU')}
+                    onMouseLeave={handleMouseLeave}>
+                    <Link to={`/products/버거`}><span>MENU</span></Link>
+                    {activeMenu === 'MENU' && <DropdownMenu><Menu/></DropdownMenu>}
                 </li>
-                <li onMouseEnter={()=>setDropdownOpen(true)}
-                    onMouseLeave={()=>setDropdownOpen(false)}>
+                <li onMouseEnter={handleMouseEnter('STORE')}
+                    onMouseLeave={handleMouseLeave}>
                     <Link to='/store/find'><span>STORE</span></Link>
-                    {isDropdownOpen && (
-                        <ul className='subMenu'>
-                            <li><Store/></li>
-                        </ul>
-                     )}
+                    {activeMenu === 'STORE' && <DropdownMenu><Store/></DropdownMenu>}
                 </li>
-                <li onMouseEnter={()=>setDropdownOpen(true)}
-                    onMouseLeave={()=>setDropdownOpen(false)}>
+                <li onMouseEnter={handleMouseEnter('WHATS_NEW')}
+                    onMouseLeave={handleMouseLeave}>
                     <Link to='/new/promotion'><span>WHAT'S NEW</span></Link>
-                    {isDropdownOpen && (
-                        <ul className='subMenu'>
-                            <li><WhatsNew/></li>
-                        </ul>
-                     )}
+                    {activeMenu === 'WHATS_NEW' && <DropdownMenu><WhatsNew/></DropdownMenu>}
                 </li>
-                <li onMouseEnter={()=>setDropdownOpen(true)}
-                    onMouseLeave={()=>setDropdownOpen(false)}>
+                <li onMouseEnter={handleMouseEnter('STORY')}
+                    onMouseLeave={handleMouseLeave}>
                     <Link to='/story/brand'><span>STORY</span></Link>
-                    {isDropdownOpen && (
-                        <ul className='subMenu'>
-                            <li><Story/></li>
-                        </ul>
-                     )}
+                    {activeMenu === 'STORY' && <DropdownMenu><Story/></DropdownMenu>}
                 </li>
-                <li >
+                <li>
                     <Link to='/searchresult'>검색</Link>
                 </li>
             </ul>
         </Nav>
+
     )
 }
 
@@ -69,7 +78,7 @@ const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-ul {
+    ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -79,11 +88,23 @@ ul {
         position: relative;
         width: 130px;
         height: 100%;
+        transition: 250ms;
+        z-index: 1;
         text-align: center;
         &:hover{
             ul{
                 display: block;
                 width: 100%;
+            }
+            ul:before{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: -100%;
+                left: 0px;
+                transition: 250ms;
+                z-index: -1;
             }
         }
         ul{
@@ -93,13 +114,17 @@ ul {
             left: 0;
             background: #fff;
             border-top: 3px solid gold;
+            z-index: -1;
             li{
                 padding: 25px 0px 35px;
-                
             }
         }
     }
 }
 
-
+@media (max-width: 1280px){
+    ul{
+        display: none;
+    }
+}
 `

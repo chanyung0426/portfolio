@@ -141,18 +141,17 @@ const HeaderContainer = styled.header`
         .userwrap{
             display: none;
         }
-
     }
 `
 
 const NavigationIcon = styled.div`
     width: 25px;
     height: 25px;
-    /* border: 1px solid #333; */
     top: 50%;
     right: 25px;  
     cursor: pointer;
     position: absolute;
+    z-index: 9999;
 
     /* Style for the three lines of the hamburger icon */
     .menu-icon {
@@ -173,6 +172,7 @@ const NavigationIcon = styled.div`
 
         /* Rotate lines to form an X when menu is open */
         &.open {
+            background: #fff;
             &:first-child {
                 transform: rotate(45deg) translateY(0px);
             }
@@ -186,4 +186,4 @@ const NavigationIcon = styled.div`
             }
         }
     }
-`;
+`

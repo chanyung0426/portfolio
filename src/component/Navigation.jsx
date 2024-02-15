@@ -42,7 +42,7 @@ function Navigation() {
                     <Link to={`/products/버거`}><span>MENU</span></Link>
                     {activeMenu === 'MENU' && <DropdownMenu><Menu/></DropdownMenu>}
                 </li>
-                <li onMouseEnter={handleMouseEnter('STORE')}
+                <li onMouseEnter={handleMouseEnter('STORE')} 
                     onMouseLeave={handleMouseLeave}>
                     <Link to='/store/find'><span>STORE</span></Link>
                     {activeMenu === 'STORE' && <DropdownMenu><Store/></DropdownMenu>}
@@ -122,9 +122,38 @@ const Nav = styled.nav`
     }
 }
 
-@media (max-width: 1280px){
+@media (max-width: 1280px){  
+    width: 50%;
+    height: 100%;
+    background: #222;
+    padding-left: 15px;
+    left: 80%;
+    padding: 60px;
+    position: fixed;
+    
+    //navigation 메뉴
     ul{
-        display: none;
+        li{
+           display: block;
+           width: 500px;
+           padding-bottom: 30px;
+           margin-bottom: 30px;
+           text-align: left;
+           border-bottom: 1px solid rgba(255,255,255,0.1);
+           &:hover{
+            ul{
+                display: none;
+                width: 100%;
+            }
+            ul:before{
+                display: none;
+            }
+           }
+        }
     }
+    span{
+        color: #fff;
+    }
+    
 }
 `

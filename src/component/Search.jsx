@@ -76,11 +76,19 @@ const SearchForm = styled.form`
     right: 265px;
     transition: 500ms;
     width: 36px;
-    z-index: 11;
+    z-index: 111;
     .search-btn{
         font-size: 36px;
         display: flex;
         align-items: center;
+    }
+    @media (max-width: 1280px){
+        path{
+            color: #fff;
+        }
+        input{
+            color: #fff;
+        }
     }
 `
 

@@ -13,7 +13,6 @@ function Header() {
 
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 1280);
     const [menuOpen, setMenuOpen] = useState(false);
-    const [subMenuOpen, setSubMenuOpen] = useState(false);
 
     useEffect(()=>{
         const handleResize = () =>{
@@ -26,10 +25,6 @@ function Header() {
 
     const handleMenuToggle = () => {
         setMenuOpen(prevMenuOpen => !prevMenuOpen);
-    };
-
-    const handleSubMenuToggle = () => {
-        setSubMenuOpen(prevSubMenuOpen => !prevSubMenuOpen);
     };
 
     const login = ()=>{
@@ -49,6 +44,7 @@ function Header() {
         <HeaderContainer>
             <h1 className='logo'><Link to='/'><SiMcdonalds /></Link></h1>
             
+            {/* 햄버거버튼 */}
             {isMobile && (
                 <NavigationIcon className='hamburger-menu' onClick={handleMenuToggle}>
                     <div className={`menu-icon ${menuOpen ? 'open' : ''}`} />
@@ -58,7 +54,7 @@ function Header() {
             )}
 
             {!isMobile || menuOpen ? (
-                <Navigation isMobile={isMobile} subMenuOpen={subMenuOpen} handleSubMenuToggle={handleSubMenuToggle} />
+                <Navigation isMobile={isMobile}/>
             ) : null}
             
             <Util/>
@@ -115,7 +111,7 @@ const HeaderContainer = styled.header`
     .userWrap{
         display: flex;
         margin-left: auto;
-        padding-right: 61px;
+        padding-right: 60px;
         align-items: center;
         gap: 12px;
         button{
@@ -138,7 +134,7 @@ const HeaderContainer = styled.header`
             left: 0;
             font-size: 88px;
         }
-        .userwrap{
+        .userWrap{
             display: none;
         }
     }
@@ -148,7 +144,7 @@ const NavigationIcon = styled.div`
     width: 25px;
     height: 25px;
     top: 50%;
-    right: 25px;  
+    right: 50px;  
     cursor: pointer;
     position: absolute;
     z-index: 9999;
@@ -185,5 +181,9 @@ const NavigationIcon = styled.div`
                 transform: rotate(-45deg) translateY(-0px);
             }
         }
+    }
+
+    @media (max-width: 1280px){
+        right: 60px;
     }
 `

@@ -19,7 +19,7 @@ function Navigation() {
 
     const [activeMenu, setActiveMenu] = useState(null);
     const timeoutRef = useRef(null); //timeout을 관리하기 위한 ref
-
+    
     const handleMouseEnter = (menuName) => () => {
         clearTimeout(timeoutRef.current); // 이전에 설정된 timeout을 제거
         timeoutRef.current = setTimeout(() => {
@@ -122,14 +122,13 @@ const Nav = styled.nav`
     }
 }
 
-@media (max-width: 1280px){  
+@media (max-width: 1280px){
+    position: fixed;
     width: 50%;
     height: 100%;
     background: #222;
-    padding-left: 15px;
     left: 80%;
     padding: 60px;
-    position: fixed;
     
     //navigation 메뉴
     ul{

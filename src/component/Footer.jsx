@@ -72,4 +72,23 @@ const List = styled.div`
         font-weight: 400;
         opacity: .6;
     }
+    @media (max-width: 1024px){
+        
+        .fUtil{
+            display: none;
+        }
+        .fSNS{
+            float: none;
+            display: flex;
+            /* pc로 보면서 ui 수정 */
+        }
+        .fInfo{
+            float: none;
+            display: flex;
+            li{
+                font-size: 12px;
+                margin-left: 10px;
+            }
+        }
+    }
 `

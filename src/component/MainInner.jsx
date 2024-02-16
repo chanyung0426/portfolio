@@ -161,4 +161,18 @@ const Container = styled.div`
         font-weight: 600;
         line-height: 1.7;
     }
+
+   @media (max-width: 1280px){
+    h2{
+        font-size: 30px;
+    }
+   } 
+   @media (max-width: 1024px){
+    h2{
+        padding-left: 130px;
+    }
+    .menuList{
+        margin: 0 0 -35px 100px;
+    }
+    }
 `

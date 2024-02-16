@@ -81,14 +81,10 @@ const SearchForm = styled.form`
         font-size: 36px;
         display: flex;
         align-items: center;
+        color: #FFBC0D;
     }
     @media (max-width: 1280px){
-        path{
-            color: #fff;
-        }
-        input{
-            color: #fff;
-        }
+       
     }
 `
 

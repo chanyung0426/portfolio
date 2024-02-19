@@ -31,6 +31,7 @@ function Promotion({image}) {
                         style={{ 
                             backgroundImage: `url(${imageUrl})`,
                             backgroundSize: 'cover',
+                            backgroundPosition: 'center',
                             height: '300px',
                             }}>
                         </div>
@@ -58,5 +59,29 @@ const PromotionContainer = styled.div`
         flex-shrink: 0;
         flex-basis: 30%;
         }
+}
+@media (max-width:1280px){  
+    padding: 0 60px 60px;
+    .container{ 
+        gap: 43px;
+    }
+}
+@media (max-width: 1024px){
+   .container{
+    width: 73.71%;
+    li{
+        flex-basis: 47%;
+    }
+   }
+}
+@media (max-width: 768px){
+    .container{
+      width: 50%;
+      padding-left: 10%;
+      li{
+        flex-basis: 70%;
+      }
+    }
+    
 }
 `

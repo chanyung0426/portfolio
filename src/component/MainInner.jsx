@@ -165,14 +165,30 @@ const Container = styled.div`
    @media (max-width: 1280px){
     h2{
         font-size: 30px;
+        padding-left: 67px;
+    }
+    .menuList{
+        width: 91.25%;
+        margin: 0 auto;
+    }
+    .menuList li{
+        width: 31.33%;
+        margin: 0 0 35px 20px;
     }
    } 
    @media (max-width: 1024px){
-    h2{
-        padding-left: 130px;
+    margin: 0 auto;
+    margin-left: 100px;
+    .menuList li{
+        height: 380px; 
+        margin-right: 10px;
     }
-    .menuList{
-        margin: 0 0 -35px 100px;
+    .menuList li:last-child{
+        display: none;
     }
+    }
+    @media (max-width: 768px){
+        width: 100%;
+        
     }
 `

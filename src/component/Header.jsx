@@ -97,7 +97,7 @@ const HeaderContainer = styled.header`
         position: absolute;
         top: 0;
         left: 0;
-        margin: 0px 61px;
+        margin: 0px 60px;
         font-size: 108px;
         a{
             display: flex;
@@ -144,7 +144,7 @@ const NavigationIcon = styled.div`
     width: 25px;
     height: 25px;
     top: 50%;
-    right: 50px;  
+    right: 60px;  
     cursor: pointer;
     position: absolute;
     z-index: 9999;
@@ -184,6 +184,6 @@ const NavigationIcon = styled.div`
     }
 
     @media (max-width: 1280px){
-        right: 60px;
+        right: 70px;
     }
 `

@@ -11,12 +11,12 @@ function Footer() {
         <FooterContainer>
             <List>
             <ul className='fUtil'>
-                <li>개인정보 처리방침</li>
-                <li>위치정보 이용약관</li>
-                <li>사이트맵</li>
-                <li>임차문의</li>
-                <li>고객문의</li>
-                <li>인재채용</li>
+                <li><Link to='https://www.mcdonalds.co.kr/kor/etc/private.do' target="_blank">개인정보 처리방침</Link></li>
+                <li><Link to='https://www.mcdonalds.co.kr/kor/etc/location.do' target="_blank">위치정보 이용약관</Link></li>
+                <li><Link to='https://www.mcdonalds.co.kr/kor/etc/sitemap.do' target="_blank">사이트맵</Link></li>
+                <li><Link to='https://www.mcdonalds.co.kr/kor/store/rental.do' target="_blank">임차문의</Link></li>
+                <li><Link to='https://voc.mcd.co.kr/MC/HOM/faqMain.jsp' target="_blank">고객문의</Link></li>
+                <li><Link to='https://www.mcdonalds.co.kr/kor/story/people/recruit.do' target="_blank">인재채용</Link></li>
             </ul>
             
             <ul className='fSNS'>
@@ -48,6 +48,9 @@ const FooterContainer = styled.footer`
     background: #292929;
     margin-top: auto;
     padding-bottom: 30px;
+    @media (max-width:1024px){
+        padding-bottom: 0;
+    }
 `
 const List = styled.div`
     width: 1168px;
@@ -58,6 +61,9 @@ const List = styled.div`
     .fUtil{
         float: left;
         width: 190px;
+        a{
+            color:#fff;
+        }
     }
     .fSNS{
         float: right;
@@ -72,23 +78,34 @@ const List = styled.div`
         font-weight: 400;
         opacity: .6;
     }
+    @media (max-width: 1280px){
+        width: 91.25%;  
+    }
     @media (max-width: 1024px){
-        
+        padding: 35px 0 45px;
         .fUtil{
             display: none;
         }
         .fSNS{
             float: none;
-            display: flex;
-            /* pc로 보면서 ui 수정 */
+            display: table;
+            margin: 0 auto;
         }
         .fInfo{
             float: none;
             display: flex;
+            padding-left: 30px;
             li{
                 font-size: 12px;
                 margin-left: 10px;
             }
+        }
+    }
+    @media (max-width:768px){
+        padding: 25px 0 35px;
+        .fInfo{
+            display: block;
+            margin-top: 15px;
         }
     }
 `

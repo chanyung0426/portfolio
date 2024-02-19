@@ -104,19 +104,30 @@ export default McDonaldsStoreList;
 const ListContainer = styled.div`
   margin: 0 auto;
   margin-top: 50px;
-  padding: 30px 0 60px;  
+  padding: 30px 0 60px;
+
+  @media (max-width: 1024px){
+    margin: 0 auto;
+  }
 `
 const List = styled.ul`
   margin: 0 auto;
   padding-top: 80px;  
   li{
-    padding: 20px;
+    padding: 15px;
     color: #808080;
     border-bottom: 1px solid #000;
     strong{
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 600;
       color: #000;
     }
   }
+  @media (max-width:1024px){
+    padding-left: 60px;
+    li{
+      width: 73.71%;
+    }
+  }
+ 
 `

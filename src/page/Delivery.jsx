@@ -125,7 +125,7 @@ const DeliveryContainer = styled.div`
   ul{
   width: 50%;
   margin: 0 auto;
-  padding: 100px 0px 0px 30px;
+  padding: 130px 0px 0px 30px;
   }
 
   ul > li{

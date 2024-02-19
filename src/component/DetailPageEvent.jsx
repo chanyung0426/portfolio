@@ -63,13 +63,12 @@ const DetailItem = styled.div`
     }
     .itemAllergic{
             padding-top: 14px;
-            font-size: 18px;
+            font-size: 16px;
     }
   
     .itemPrice{
             padding-top: 14px;
             color:  #44900c;
-            font-size: 18px;
+            font-size: 16px;
     }
-
 `

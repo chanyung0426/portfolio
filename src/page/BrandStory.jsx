@@ -40,7 +40,7 @@ const BrandContainer = styled.div`
     margin-top: 150px;
     padding: 30px 0 5%;
     h1{
-        margin: 0 0px 60px;
+        margin: 0 0 60px;
         font-size: 22px;
         font-weight: 600;
     }
@@ -87,12 +87,55 @@ const BrandContainer = styled.div`
         padding-left: 50px;
         font-weight: bold;
     }
+    @media (max-width: 1024px){
+        width: 91.25%;
+    }
+    @media (max-width: 1024px){
+       strong{
+        width: 100%;
+        padding-left: 0;
+       }
+       .kor{
+        width: 100%;
+        padding-left: 0;
+       }
+       .kor2{
+        width: 100%;
+        padding-left: 0;
+       }
+    }
+    @media (max-width:768px){
+        width: 80%;
+        h1{
+            margin: 0 0 30px;
+            font-size: 20px;
+        }
+        h2{
+            font-size: 24px;
+        }
+        h3{
+            font-size: 18px;
+        }
+        strong{
+            font-size: 22px;
+            margin-top: 45px;
+        }
+        .kor{
+            margin-top: 50px;
+        }
+        .kor2{
+            margin-top: 25px;
+        }
+    }
 `
 export const Outbox = styled.div`
     width: 1168px;
     height: 400px;
     margin-bottom: 45px;
-    background: url(${brand01});
+    background: url(${brand01}) no-repeat center / cover;
+    @media (max-width: 1024px){
+        width: 100%;
+    } 
  `
 export const OutBox2 = styled.div`
     float: left;
@@ -100,4 +143,9 @@ export const OutBox2 = styled.div`
     height: 500px;
     margin-top: 80px;
     background: url(${brand02}) no-repeat center / cover;
+ 
+    @media (max-width: 1024px){
+        width: 100%;
+    }
+ 
  `

@@ -49,4 +49,17 @@ const CategoryItem = styled.ul`
         margin: 0 0 35px 35px;
         padding: 20px;
     }
+
+    @media (max-width: 1280px){
+        width: 91.25%;
+    }
+    @media (max-width: 1024px){
+        li{
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+    }
+    @media (max-width: 768px){
+        width: 100%;
+    }
 `

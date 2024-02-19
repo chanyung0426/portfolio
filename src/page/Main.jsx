@@ -33,6 +33,7 @@ function MySwiper() {
                 delay: 3000,
                 disableOnInteraction: false,
             },
+            autoHeight: true,
         });
 
         return ()=>{
@@ -75,13 +76,10 @@ function MySwiper() {
 export default MySwiper
 
 const MainContainer = styled.div`
-    @media (min-width: 1024px){
+    @media (max-width: 1024px){
         width: 100%;
-
     }
 `
-
-
 const SwiperContainer = styled.div`
     position: relative;
     top: 108px;

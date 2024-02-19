@@ -126,7 +126,7 @@ const Nav = styled.nav`
     position: fixed;
     width: 50%;
     height: 100%;
-    background: #222;
+    background: #FFBC0D;
     left: 80%;
     padding: 60px;
     
@@ -138,7 +138,7 @@ const Nav = styled.nav`
            padding-bottom: 30px;
            margin-bottom: 30px;
            text-align: left;
-           border-bottom: 1px solid rgba(255,255,255,0.1);
+           border-bottom: 2px solid rgba(255,255,255,0.1);
            &:hover{
             ul{
                 display: none;

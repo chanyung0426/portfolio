@@ -163,12 +163,12 @@ const Container = styled.div`
     }
 
    @media (max-width: 1280px){
+    width: 91.25%;
     h2{
         font-size: 30px;
-        padding-left: 67px;
+        padding-left: 18px;
     }
     .menuList{
-        width: 91.25%;
         margin: 0 auto;
     }
     .menuList li{
@@ -178,17 +178,15 @@ const Container = styled.div`
    } 
    @media (max-width: 1024px){
     margin: 0 auto;
-    margin-left: 100px;
     .menuList li{
-        height: 380px; 
+        width: 45%; 
         margin-right: 10px;
     }
     .menuList li:last-child{
         display: none;
     }
     }
-    @media (max-width: 768px){
-        width: 100%;
-        
-    }
+    /* @media (max-width:375px){
+
+    } */
 `

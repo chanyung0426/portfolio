@@ -127,8 +127,6 @@ const HeaderContainer = styled.header`
     }
 
     @media (max-width: 1280px){
-        padding: 20px;
-        width: 100%;
         .logo{
             top: 10px;
             left: 0;
@@ -136,6 +134,11 @@ const HeaderContainer = styled.header`
         }
         .userWrap{
             display: none;
+        }
+    }
+    @media (max-width: 375px){
+        .logo{
+            font-size: 15px;
         }
     }
 `

@@ -127,10 +127,10 @@ const HeaderContainer = styled.header`
     }
 
     @media (max-width: 1280px){
+        height: 70px;
         .logo{
-            top: 10px;
             left: 0;
-            font-size: 88px;
+            font-size: 70px;
         }
         .userWrap{
             display: none;
@@ -138,7 +138,7 @@ const HeaderContainer = styled.header`
     }
     @media (max-width: 375px){
         .logo{
-            font-size: 15px;
+            font-size: 45px;
         }
     }
 `

@@ -1,15 +1,25 @@
-import { getApp, initializeApp } from "firebase/app";
+import { initializeApp } from "firebase/app";
 import {GoogleAuthProvider, getAuth, onAuthStateChanged, signInWithPopup, signOut} from "firebase/auth"
 import {set, ref, getDatabase, get} from 'firebase/database';
 import {v4 as uuid} from 'uuid'
 
+// const firebaseConfig = {
+//     apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+//     authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+//     projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+//     databaseURL: process.env.REACT_APP_FIREBASE_DB_URL
+// }
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-    databaseURL: process.env.REACT_APP_FIREBASE_DB_URL
-}
-
+    apiKey: "AIzaSyB8f7mxqHBuRu6j3IFDQGOCH_Ata4BwcD8",
+    authDomain: "mcdonald-acaaf.firebaseapp.com",
+    databaseURL: "https://mcdonald-acaaf-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "mcdonald-acaaf",
+    storageBucket: "mcdonald-acaaf.appspot.com",
+    messagingSenderId: "655784721391",
+    appId: "1:655784721391:web:bff5c3e85cca876ba4141a",
+    measurementId: "G-9CMCRHHFBQ"
+  };
+  
 const app = initializeApp(firebaseConfig);
 const provider = new GoogleAuthProvider();
 const auth = getAuth(); 

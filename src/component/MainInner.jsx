@@ -167,27 +167,51 @@ const Container = styled.div`
     padding-top: 100px;
     h2{
         font-size: 30px;
-        padding-left: 18px;
+        padding-left: 28px;
     }
     .menuList{
+        margin: 0 0 -30px -30px;
         margin: 0 auto;
     }
     .menuList li{
-        width: 31.33%;
-        margin: 0 0 35px 20px;
+        width: 30%;
+        margin: 0 0 30px 30px;
     }
    } 
    @media (max-width: 1024px){
     margin: 0 auto;
     .menuList li{
         width: 45%; 
-        margin-right: 10px;
     }
     .menuList li:last-child{
         display: none;
     }
     }
-    /* @media (max-width:375px){
-
-    } */
+    @media (max-width: 768px){
+        .menuList{
+            margin-top: -30px;
+        }
+        .menuList li{
+            width: 41%;
+            height: 330px;
+        }
+        .con{
+            padding: 15px 20px;
+        }
+        strong{
+            font-size: 14px;
+        }
+    }
+    @media (max-width: 375px){
+        .menuList li{
+            height: 204px;
+        }
+        .con{
+            padding: 20px 0px;
+        }
+        strong{
+            font-weight: 500;
+        }
+        
+    }
 `

@@ -188,6 +188,9 @@ const NavigationIcon = styled.div`
     }
 
     @media (max-width: 1280px){
-        right: 70px;
+        right: 60px;
+    }
+    @media(max-width:376px){
+        right: 20px;
     }
 `

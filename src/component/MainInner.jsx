@@ -164,6 +164,7 @@ const Container = styled.div`
 
    @media (max-width: 1280px){
     width: 91.25%;
+    padding-top: 100px;
     h2{
         font-size: 30px;
         padding-left: 18px;

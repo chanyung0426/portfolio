@@ -136,8 +136,9 @@ const HeaderContainer = styled.header`
             display: none;
         }
     }
-    @media (max-width: 375px){
-        .logo{
+    @media (max-width: 376px){
+        .logo{  
+            margin: 10px 20px;
             font-size: 45px;
         }
     }

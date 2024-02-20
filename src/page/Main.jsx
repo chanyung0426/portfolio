@@ -76,9 +76,7 @@ function MySwiper() {
 export default MySwiper
 
 const MainContainer = styled.div`
-    @media (max-width: 1024px){
-        width: 100%;
-    }
+    
 `
 const SwiperContainer = styled.div`
     position: relative;
@@ -150,5 +148,8 @@ const SwiperContainer = styled.div`
                 }
             }
         }
+    }
+    @media (max-width:1280px){
+        top: 70px;
     }
 `;

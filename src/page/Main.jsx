@@ -157,6 +157,9 @@ const SwiperContainer = styled.div`
     }
     @media (max-width:1280px){
         top: 70px;
+        img{
+            min-height: 540px;
+        }
     }
     @media (max-width:1024px){
         img{

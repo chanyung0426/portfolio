@@ -49,7 +49,6 @@ const PromotionContainer = styled.div`
     margin: 0 auto;
     margin-top: 150px;
     padding: 30px 0 60px;
-    
     .container{
         display: flex;
         gap: 30px;
@@ -67,12 +66,11 @@ const PromotionContainer = styled.div`
     }
 }
 @media (max-width: 1024px){
-   .container{
-    width: 73.71%;
-    li{
-        flex-basis: 47%;
+    .container{
+        li{
+            flex-basis: 36%;
+        }
     }
-   }
 }
 @media (max-width: 768px){
     .container{

@@ -148,8 +148,24 @@ const SwiperContainer = styled.div`
                 }
             }
         }
+
+        .swiper-slide img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
     }
     @media (max-width:1280px){
         top: 70px;
+    }
+    @media (max-width:1024px){
+        img{
+            min-height: 488px;
+        }
+    }
+    @media (max-width:375px){
+        img{
+            min-height: 375px;
+        }
     }
 `;

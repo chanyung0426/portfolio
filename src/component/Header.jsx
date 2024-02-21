@@ -190,7 +190,7 @@ const NavigationIcon = styled.div`
     @media (max-width: 1280px){
         right: 60px;
     }
-    @media(max-width:376px){
+    @media(max-width:375px){
         right: 20px;
     }
 `

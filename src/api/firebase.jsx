@@ -3,12 +3,6 @@ import {GoogleAuthProvider, getAuth, onAuthStateChanged, signInWithPopup, signOu
 import {set, ref, getDatabase, get} from 'firebase/database';
 import {v4 as uuid} from 'uuid'
 
-// const firebaseConfig = {
-//     apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-//     authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-//     projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-//     databaseURL: process.env.REACT_APP_FIREBASE_DB_URL
-// }
 const firebaseConfig = {
     apiKey: "AIzaSyB8f7mxqHBuRu6j3IFDQGOCH_Ata4BwcD8",
     authDomain: "mcdonald-acaaf.firebaseapp.com",
@@ -19,7 +13,7 @@ const firebaseConfig = {
     appId: "1:655784721391:web:bff5c3e85cca876ba4141a",
     measurementId: "G-9CMCRHHFBQ"
   };
-  
+
 const app = initializeApp(firebaseConfig);
 const provider = new GoogleAuthProvider();
 const auth = getAuth(); 

@@ -94,7 +94,6 @@ const List = styled.div`
         .fInfo{
             float: none;
             display: flex;
-            padding-left: 30px;
             li{
                 font-size: 12px;
                 margin-left: 10px;
@@ -106,6 +105,11 @@ const List = styled.div`
         .fInfo{
             display: block;
             margin-top: 15px;
+        }
+        .fSNS{
+            li{
+                font-size: 35px;
+            }
         }
     }
 `

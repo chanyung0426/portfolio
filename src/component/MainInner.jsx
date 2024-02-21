@@ -60,7 +60,6 @@ function MainInner() {
                     <div className='con'>
                         <strong>
                         맥도날드 M오더
-                        
                         </strong>
                         <br/>
                     </div>
@@ -131,15 +130,18 @@ const Container = styled.div`
         line-height: 1;
     }
     .menuList{
-        margin: 0 0 -35px -35px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
     }
     .menuList li{
-        float: left;
-        width: 366px;
-        height: 438px;
-        margin: 0 0 35px 35px;
-        display: block;
-        overflow: hidden;
+        width: calc(33.33% - 20px); 
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
         border-radius: 10px;
         box-shadow: 0 3px 4px rgba(0,0,0,.1);
     }
@@ -148,6 +150,7 @@ const Container = styled.div`
         padding: 0;
         line-height: 0;
         vertical-align: top;
+        border-radius: 10px 10px 0 0;
     }
     .con{
         padding: 24px 30px;
@@ -161,27 +164,19 @@ const Container = styled.div`
         font-weight: 600;
         line-height: 1.7;
     }
-
-   @media (max-width: 1280px){
-    width: 91.25%;
-    padding-top: 100px;
-    h2{
-        font-size: 30px;
-        padding-left: 28px;
-    }
-    .menuList{
-        margin: 0 0 -30px -30px;
-        margin: 0 auto;
-    }
-    .menuList li{
-        width: 30%;
-        margin: 0 0 30px 30px;
-    }
-   } 
    @media (max-width: 1024px){
     margin: 0 auto;
+    width: 100%;
+    padding-top: 100px;
+    h2{
+        margin-left: 20px;
+    }
+    .menuList{
+        gap: 10px;
+    }
     .menuList li{
-        width: 45%; 
+        width: calc(50% - 20px); 
+        
     }
     .menuList li:last-child{
         display: none;
@@ -191,27 +186,11 @@ const Container = styled.div`
         .menuList{
             margin-top: -30px;
         }
-        .menuList li{
-            width: 41%;
-            height: 330px;
-        }
         .con{
             padding: 15px 20px;
         }
         strong{
             font-size: 14px;
         }
-    }
-    @media (max-width: 375px){
-        .menuList li{
-            height: 204px;
-        }
-        .con{
-            padding: 20px 0px;
-        }
-        strong{
-            font-weight: 500;
-        }
-        
     }
 `

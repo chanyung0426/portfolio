@@ -97,7 +97,7 @@ const HeaderContainer = styled.header`
         position: absolute;
         top: 0;
         left: 0;
-        margin: 0px 60px;
+        margin-left: 60px;
         font-size: 108px;
         a{
             display: flex;
@@ -128,12 +128,17 @@ const HeaderContainer = styled.header`
 
     @media (max-width: 1280px){
         height: 70px;
-        .logo{
-            left: 0;
+        .logo{  
+            margin-left: 45px;
             font-size: 70px;
         }
         .userWrap{
             display: none;
+        }
+    }
+    @media (max-width: 1024px){
+        .logo{
+            margin-left: 20px;
         }
     }
     @media (max-width: 376px){
@@ -161,7 +166,6 @@ const NavigationIcon = styled.div`
         background-color: #333;
         transition: all 0.3s ease;
         
-
         &:first-child {
             transform: translateY(7px);
         }
@@ -188,9 +192,12 @@ const NavigationIcon = styled.div`
     }
 
     @media (max-width: 1280px){
-        right: 60px;
-    }
-    @media(max-width:375px){
+        right: 45px;
+    } 
+    @media (max-width: 1024px){
         right: 20px;
     }
+    /* @media(max-width:375px){
+        right: 20px;
+    } */
 `

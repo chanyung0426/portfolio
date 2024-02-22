@@ -139,11 +139,8 @@ const HeaderContainer = styled.header`
             margin-left: 20px;
         }
     }
-<<<<<<< HEAD
+
     @media (max-width: 374px){
-=======
-    @media (max-width: 376px){
->>>>>>> ce2679362e4aeb41436c6dc5839cb16701d99390
         .logo{  
             margin: 10px 20px;
             font-size: 45px;

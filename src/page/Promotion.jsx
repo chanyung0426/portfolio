@@ -72,14 +72,4 @@ const PromotionContainer = styled.div`
         }
     }
 }
-@media (max-width: 768px){
-    .container{
-      width: 50%;
-      padding-left: 10%;
-      li{
-        flex-basis: 70%;
-      }
-    }
-    
-}
 `

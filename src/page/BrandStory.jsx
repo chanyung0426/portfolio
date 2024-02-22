@@ -38,7 +38,7 @@ const BrandContainer = styled.div`
     width: 1168px;
     margin: 0 auto;
     margin-top: 150px;
-    padding: 30px 0 5%;
+    padding: 30px 0 7%;
     h1{
         margin: 0 0 60px;
         font-size: 22px;
@@ -89,6 +89,7 @@ const BrandContainer = styled.div`
     }
     @media (max-width: 1024px){
         width: 91.25%;
+        margin-top: 100px;
     }
     @media (max-width: 1024px){
        strong{
@@ -127,6 +128,12 @@ const BrandContainer = styled.div`
             margin-top: 25px;
         }
     }
+    @media (max-width: 391px){
+        margin-top: 80px;
+        .kor{
+            margin-top: 30px;
+        }
+    }
 `
 export const Outbox = styled.div`
     width: 1168px;
@@ -146,6 +153,6 @@ export const OutBox2 = styled.div`
  
     @media (max-width: 1024px){
         width: 100%;
+        margin-top: 60px;
     }
- 
  `

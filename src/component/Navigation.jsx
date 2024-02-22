@@ -6,7 +6,6 @@ import Store from '../page/Store';
 import WhatsNew from '../page/WhatsNew';
 import Story from '../page/Story';
 
-//dropdown menu component
 const DropdownMenu = ({children})=>{
     return (
         <ul className='subMenu'>
@@ -62,7 +61,6 @@ function Navigation() {
                 </li>
             </ul>
         </Nav>
-
     )
 }
 

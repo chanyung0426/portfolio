@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import Util from './Util';
 import { googleLogOut, googleLogin, onUserState } from '../api/firebase';
 import UserData from './UserData';
+import SliderNav from './SliderNav';
 
 
 function Header() {
@@ -54,9 +55,10 @@ function Header() {
             )}
 
             {!isMobile || menuOpen ? (
-                <Navigation isMobile={isMobile}/>
+                <SliderNav isMobile={isMobile}/>
             ) : null}
             
+            <Navigation/>
             <Util/>
             
             <div className='userWrap'>
@@ -145,11 +147,6 @@ const HeaderContainer = styled.header`
             margin-top: 10px;
         }
     }
-    /* @media (max-width: 390px){
-        .logo{  
-            margin: 10px 20px;
-        }
-    } */
 `
 
 const NavigationIcon = styled.div`
@@ -200,7 +197,4 @@ const NavigationIcon = styled.div`
     @media (max-width: 1024px){
         right: 20px;
     }
-    /* @media(max-width:375px){
-        right: 20px;
-    } */
 `

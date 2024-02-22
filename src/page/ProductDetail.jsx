@@ -17,9 +17,7 @@ function ProductDetail() {
                     <p className='description'>{description}</p>
                     <p className='price'>{price}</p>
                 </div>
-                
             </DetailPage>
-           
         </div>
     )
 }
@@ -27,7 +25,6 @@ function ProductDetail() {
 export default ProductDetail
 
 const DetailPage = styled.div`
-/* width: 100%; */
 display: flex;
 gap: 40px;
 width: 1168px;
@@ -60,5 +57,23 @@ margin-top: 250px;
         color: #808080;
         font-weight: 500;
     }
+}
+@media (max-width:768px){
+       width: 50%;
+       margin: 150px 25% 100px;
+       flex-direction: column;  
+       justify-content: center; 
+}
+@media (max-width: 391px){
+       margin-bottom: 50px;
+       .detailText{
+        h3{
+        font-size: 30px;
+        }
+        p{
+            font-size: 14px;
+            line-height: 1.5;
+        }
+       }
 }
 `

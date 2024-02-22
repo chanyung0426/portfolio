@@ -139,13 +139,17 @@ const HeaderContainer = styled.header`
             margin-left: 20px;
         }
     }
-
-    @media (max-width: 374px){
-        .logo{  
-            margin: 10px 20px;
+    @media (max-width:768px){
+        .logo{
             font-size: 45px;
+            margin-top: 10px;
         }
     }
+    /* @media (max-width: 390px){
+        .logo{  
+            margin: 10px 20px;
+        }
+    } */
 `
 
 const NavigationIcon = styled.div`

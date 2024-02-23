@@ -77,6 +77,7 @@ const DetailItem = styled.div`
         }
         .itemAllergic{
             font-size: 12px;
+            line-height: 1.5;
         }
         .itemPrice{
             font-size: 12px;

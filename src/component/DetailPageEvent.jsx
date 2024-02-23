@@ -71,4 +71,15 @@ const DetailItem = styled.div`
             color:  #44900c;
             font-size: 16px;
     }
+    @media (max-width:389px){
+        .itemTitle{
+            font-size: 14px;
+        }
+        .itemAllergic{
+            font-size: 12px;
+        }
+        .itemPrice{
+            font-size: 12px;
+        }
+    }
 `

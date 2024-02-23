@@ -121,6 +121,7 @@ const Nav = styled.nav`
 }
 
 @media (max-width: 1280px){
+    display: none;
     position: fixed;
     width: 50%;
     height: 100%;

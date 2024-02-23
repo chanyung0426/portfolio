@@ -12,22 +12,26 @@ function SliderNav() {
     const toggleMenu = () =>{
         setIsOpen(!isOpen);
     }
+    const closeMenu = () =>{
+        setIsOpen(false);
+    }
+
     return (
         <Nav className={`slider-nav ${isOpen ? 'open' : ''}`}>
             <div className='menu-toggle' onClick={toggleMenu}>
                 <div className='hamburger-icon'></div>
             </div>
             <ul className='nav-links'>
-            <li>
+            <li className='category' onClick={closeMenu}>
                 <Link to={`/products/버거`}><span>MENU</span><Menu/></Link>
             </li>
-            <li>
+            <li className='category' onClick={closeMenu}> 
                 <Link to='/store/find'><span>STORE</span><Store/></Link>
             </li>
-            <li>
+            <li className='category' onClick={closeMenu}>
                 <Link to='/new/promotion'><span>WHAT'S NEW</span><WhatsNew/></Link>
             </li>
-            <li>
+            <li className='category' onClick={closeMenu}>
                 <Link to='/story/brand'><span>STORY</span><Story/></Link>   
             </li>
         </ul>    
@@ -38,37 +42,38 @@ function SliderNav() {
 export default SliderNav
 
 const Nav = styled.div`
+    display: none;  
+
     @media (max-width: 1280px){
+    display: block;
     position: fixed;
+    top: 0;
+    left: 50%;
     width: 50%;
     height: 100%;
     background: #FFBC0D;
-    left: 80%;
-    padding: 60px;
-    
+ 
     //navigation 메뉴
     ul{
-        li{
+        padding: 60px;
+        li {
            display: block;
            width: 500px;
-           padding-bottom: 30px;
-           margin-bottom: 30px;
+           margin-top: 80px;
+           padding-bottom: 10px;
            text-align: left;
+           font-size: 14px;
+           font-weight: 600;
            border-bottom: 2px solid rgba(255,255,255,0.1);
-           &:hover{
-            ul{
-                display: none;
-                width: 100%;
-            }
-            ul:before{
-                display: none;
-            }
+           nav, div{
+            display: none;
            }
         }
-    }
-    span{
+        span{
+        display: block;
+        font-size: 18px;
         color: #fff;
+        }
     }
-    
 }
 `

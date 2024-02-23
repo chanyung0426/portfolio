@@ -59,7 +59,7 @@ function McDonaldsStoreList() {
             padding: 5px;
             font-size: 20px;
             font-weight: 600;
-            color: #f20000;
+            color: #ff7f00;
             ">
             ${store.name}
             </div>
@@ -105,7 +105,6 @@ const ListContainer = styled.div`
   margin: 0 auto;
   margin-top: 50px;
   padding: 30px 0 60px;
-  border: 1px solid red;
 `
 const List = styled.ul`
   margin: 0 auto;

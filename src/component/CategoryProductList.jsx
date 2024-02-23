@@ -61,8 +61,8 @@ const CategoryItem = styled.ul`
     }
     @media (max-width: 768px){
         width: 100%;
-    }
-    @media (max-width:391px){
+    }   
+    @media (max-width:390px){
         li{
             width: 40%;
             height: 250px;

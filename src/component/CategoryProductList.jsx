@@ -62,9 +62,12 @@ const CategoryItem = styled.ul`
     @media (max-width: 768px){
         width: 100%;
     }
-    @media (max-width:375px){
+    @media (max-width:391px){
         li{
-            width: 50%;
+            width: 40%;
+            height: 250px;
+            padding: 10px;
+            margin-bottom: 25px;
         }
     }
 `

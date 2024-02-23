@@ -34,6 +34,9 @@ function SliderNav() {
             <li className='category' onClick={closeMenu}>
                 <Link to='/story/brand'><span>STORY</span><Story/></Link>   
             </li>
+            <li>
+                <Link to='/searchresult'>검색</Link>
+            </li>
         </ul>    
         </Nav>
     )
@@ -48,8 +51,8 @@ const Nav = styled.div`
     display: block;
     position: fixed;
     top: 0;
-    left: 50%;
-    width: 50%;
+    left: 0;
+    width: 100%;
     height: 100%;
     background: #FFBC0D;
  

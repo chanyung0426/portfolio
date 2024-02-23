@@ -84,7 +84,9 @@ const SearchForm = styled.form`
         color: #FFBC0D;
     }
     @media (max-width: 1280px){
-       
+        .search-btn{
+            color: #000;
+        }
     }
 `
 

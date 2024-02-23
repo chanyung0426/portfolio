@@ -71,7 +71,7 @@ const DetailItem = styled.div`
             color:  #44900c;
             font-size: 16px;
     }
-    @media (max-width:389px){
+    @media (max-width:391px){
         .itemTitle{
             font-size: 14px;
         }

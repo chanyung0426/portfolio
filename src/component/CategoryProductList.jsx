@@ -14,7 +14,6 @@ function CategoryProductList({category, product}) {
     return (
       
         <div className='container'>
-        <h2>{category}</h2>
 
         <CategoryItem className='productList'>
             {sortProducts.map((product)=>(
@@ -62,7 +61,7 @@ const CategoryItem = styled.ul`
     @media (max-width: 768px){
         width: 100%;
     }   
-    @media (max-width:389px){
+    @media (max-width:391px){
         li{
             width: 40%;
             height: 250px;

@@ -129,4 +129,9 @@ const List = styled.ul`
       color: #000;
     }
   }
+  @media (max-width:768px){
+    li{
+      font-size: 14px;
+    }
+  }
 `

@@ -82,10 +82,7 @@ function McDonaldsStoreList() {
   return (
     <ListContainer>
       <div id="map" style={{ 
-            height: '600px', 
-            width: '1168px', 
-            marginTop: '100px',
-            borderRadius: '10px'
+           
             }}> 
       </div>
       <List>
@@ -105,6 +102,19 @@ const ListContainer = styled.div`
   margin: 0 auto;
   margin-top: 50px;
   padding: 30px 0 60px;
+  #map{
+    height: 600px;
+    width: 1168px; 
+    margin-top: 100px;
+    border-radius: 10px;
+  }
+  @media (max-width:1280px){
+      width: 91.25%;
+      #map{
+        width: 100%;
+        margin-top: 70px;
+      }
+  }
 `
 const List = styled.ul`
   margin: 0 auto;
@@ -118,5 +128,13 @@ const List = styled.ul`
       font-weight: 600;
       color: #000;
     }
+  }
+  @media (max-width: 768px){
+    li{
+      strong{
+      font-size: 14px;
+      }
+    }
+    
   }
 `

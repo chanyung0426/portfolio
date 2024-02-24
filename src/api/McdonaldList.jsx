@@ -129,12 +129,4 @@ const List = styled.ul`
       color: #000;
     }
   }
-  @media (max-width: 768px){
-    li{
-      strong{
-      font-size: 14px;
-      }
-    }
-    
-  }
 `

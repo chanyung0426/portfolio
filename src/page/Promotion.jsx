@@ -26,8 +26,7 @@ function Promotion({image}) {
             <ul className='container'>
                 {imageList.map((imageUrl, index)=>(
                     <li key={index}>
-                        <div 
-                        className='img' 
+                        <div className='img' 
                         style={{ 
                             backgroundImage: `url(${imageUrl})`,
                             backgroundSize: 'cover',
@@ -51,7 +50,7 @@ const PromotionContainer = styled.div`
     padding: 30px 0 60px;
     .container{
         display: flex;
-        gap: 30px;
+        gap: 25px;
         flex-wrap: wrap;
         flex-direction: row;
         li{
@@ -60,15 +59,29 @@ const PromotionContainer = styled.div`
         }
 }
 @media (max-width:1280px){  
-    padding: 0 60px 60px;
-    .container{ 
-        gap: 43px;
-    }
+    width: 91.25%;
+    
 }
 @media (max-width: 1024px){
     .container{
         li{
-            flex-basis: 36%;
+            flex-basis: 48%;
+        }
+    }
+}
+@media (max-width: 768px){
+    .container{
+        li{
+            margin: 0 auto;
+            flex-basis: 95%;
+        }
+    }
+}
+@media (max-width: 390px){
+    .container{
+        li{
+            margin: 0 auto;
+            flex-basis: 95%;
         }
     }
 }

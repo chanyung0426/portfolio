@@ -82,7 +82,7 @@ function MainInner() {
                     </div>
                     <div className='con'>
                         <strong>
-                        갓 구워내 따뜻하고 신선한
+                        갓 구워 따뜻하고 신선한
                         <br/>
                         베이컨 토마토 에그 머핀!
                         </strong>

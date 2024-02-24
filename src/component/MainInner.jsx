@@ -187,7 +187,7 @@ const Container = styled.div`
             margin-top: -30px;
         }
         .con{
-            padding: 15px 17px;
+            padding: 15px 16px;
         }
         strong{
             font-size: 14px;

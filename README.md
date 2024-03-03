@@ -17,12 +17,12 @@
 - `css`
 - **Framework** : React
 - **Database** : Firebase
+- **REST API** : Kako Map API 
 
 ## 📌 주요 기능
 
 - 메뉴 등록 페이지 제작(관리자 권한)
-- 메뉴 등록, Firebase Database에 저장
-- 검색창 : 검색 시 메뉴 별 알레르기 정보 구현
+- 메뉴 등록 Firebase Database 저장
+- 검색창 구현 : 검색 시 메뉴 별 알레르기 정보 구현
 - 카테고리별 리스트 제작
 - 메뉴 상세페이지 제작
-- REST API: Kakao Map API를 활용한 매장 위치 정보 구현

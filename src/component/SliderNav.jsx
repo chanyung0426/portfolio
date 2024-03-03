@@ -9,29 +9,19 @@ import { Link } from 'react-router-dom';
 function SliderNav() {
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggleMenu = () =>{
-        setIsOpen(!isOpen);
-    }
-    const closeMenu = () =>{
-        setIsOpen(false);
-    }
-
     return (
         <Nav className={`slider-nav ${isOpen ? 'open' : ''}`}>
-            <div className='menu-toggle' onClick={toggleMenu}>
-                <div className='hamburger-icon'></div>
-            </div>
             <ul className='nav-links'>
-            <li className='category' onClick={closeMenu}>
+            <li className='category'>
                 <Link to={`/products/버거`}><span>MENU</span><Menu/></Link>
             </li>
-            <li className='category' onClick={closeMenu}> 
+            <li className='category'> 
                 <Link to='/store/find'><span>STORE</span><Store/></Link>
             </li>
-            <li className='category' onClick={closeMenu}>
+            <li className='category'>
                 <Link to='/new/promotion'><span>WHAT'S NEW</span><WhatsNew/></Link>
             </li>
-            <li className='category' onClick={closeMenu}>
+            <li className='category'>
                 <Link to='/story/brand'><span>STORY</span><Story/></Link>   
             </li>
             <li>
@@ -48,14 +38,19 @@ const Nav = styled.div`
     display: none;  
 
     @media (max-width: 1280px){
-    display: block;
+    display: none;
+    display: block; 
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    width: 100%;    
     height: 100%;
     background: #FFBC0D;
- 
+    z-index: 100;
+
+    .nav_on{
+        display: block;
+    }
     //navigation 메뉴
     ul{
         padding: 60px;

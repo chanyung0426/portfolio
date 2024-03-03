@@ -102,7 +102,7 @@ const ListContainer = styled.div`
   margin: 0 auto;
   margin-top: 50px;
   padding: 30px 0 60px;
-  #map{
+  #map{ 
     height: 600px;
     width: 1168px; 
     margin-top: 100px;

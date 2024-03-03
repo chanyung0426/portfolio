@@ -121,7 +121,7 @@ export default MainInner
 const Container = styled.div`
     width: 1168px;
     margin: 0 auto;
-    padding-top: 150px;
+    padding-top: 140px;
     h2{
         margin: 0 0 60px;
         color: #292929;

@@ -67,7 +67,6 @@ function McDonaldsStoreList() {
           });
 
           window.kakao.maps.event.addListener(marker, 'click', function () {
-            // Close all other info windows before opening a new one
             infoWindows.forEach((iw) => iw.close());
             infowindow.open(map, marker);
           });
@@ -81,9 +80,7 @@ function McDonaldsStoreList() {
 
   return (
     <ListContainer>
-      <div id="map" style={{ 
-           
-            }}> 
+      <div id="map"> 
       </div>
       <List>
         {mcdonaldsLocations.map((store, index) => (

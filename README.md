@@ -13,8 +13,8 @@
 ### ⚙️ 개발 환경
 
 - `Javascript`
-- `Html`
-- `css`
+- `HTML`
+- `CSS`
 - **Framework** : React
 - **Database** : Firebase
 - **REST API** : Kako Map API 

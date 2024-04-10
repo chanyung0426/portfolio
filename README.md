@@ -8,14 +8,14 @@
 
 ## 🕰️ 개발 기간
 
-23.12.04 - 24.02.24
+23.12 - 24.02
 
 ### ⚙️ 개발 환경
 
 - `Javascript`
 - `HTML`
 - `CSS`
-- **Framework** : React
+- **Framework/Library** : React
 - **Database** : Firebase
 - **REST API** : Kako Map API 
 
